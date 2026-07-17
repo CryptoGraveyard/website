@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { SiteNav } from "./components/SiteNav";
+import { roadmapPhases, roadmapStatusCopy } from "./content/roadmap";
 
 const sampleBurials = [
   {
@@ -47,16 +48,6 @@ const statCards = [
   { label: "Peak value buried", value: "$720K", note: "Sample notional" },
   { label: "Burial value", value: "$15.68", note: "Sample estimate" },
   { label: "Headstones minted", value: "Soon", note: "Roadmap item" }
-];
-
-const roadmap = [
-  "Receiving-wallet policy",
-  "Manual beta request",
-  "Review queue process",
-  "Live wallet watcher",
-  "AI eulogies",
-  "SBT memorial profiles",
-  "Randomized headstone NFTs"
 ];
 
 const exploreCards = [
@@ -315,19 +306,25 @@ export default function Home() {
           <div>
             <p className="font-mono text-xs uppercase text-acid-400">Roadmap</p>
             <h2 className="mt-2 font-display text-3xl font-bold text-bone-100 sm:text-5xl">
-              Coming after the first funeral bell
+              A staged path from concept to cemetery engine
             </h2>
             <p className="mt-4 max-w-xl text-sm leading-6 text-bone-500">
-              Wallets, watcher automation, AI eulogies, SBT memorial profiles, and collectible
-              headstones are visible on the roadmap, but not required for this first public build.
+              The project is deliberately moving from public presence to controlled beta, then
+              storage, wallet watchers, memorial automation, media, and collectibles.
             </p>
+            <Link
+              href="/roadmap"
+              className="mt-5 inline-flex font-mono text-xs uppercase text-acid-400 hover:text-bone-100"
+            >
+              Open full roadmap →
+            </Link>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
-            {roadmap.map((item, index) => (
-              <div key={item} className="terminal-border p-5">
+            {roadmapPhases.slice(0, 6).map((item, index) => (
+              <Link key={item.title} href={item.href} className="terminal-border p-5 transition hover:border-acid-400/50">
                 <div className="mb-5 flex items-center justify-between">
                   <span className="font-mono text-xs uppercase text-bone-500">
-                    Phase {index + 1}
+                    {item.phase}
                   </span>
                   {index % 2 === 0 ? (
                     <Coins className="text-acid-400" size={18} aria-hidden="true" />
@@ -335,11 +332,12 @@ export default function Home() {
                     <Ghost className="text-violet-400" size={18} aria-hidden="true" />
                   )}
                 </div>
-                <h3 className="font-display text-xl font-bold text-bone-100">{item}</h3>
+                <h3 className="font-display text-xl font-bold text-bone-100">{item.title}</h3>
+                <p className="mt-2 font-mono text-[11px] uppercase text-acid-400">{item.status}</p>
                 <p className="mt-3 text-sm leading-6 text-bone-500">
-                  Logged on the project board and intentionally staged behind the dashboard MVP.
+                  {roadmapStatusCopy[item.status]}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -11,6 +11,7 @@ https://cryptograveyard.io
 ## Current Pages
 
 - `/` — mini graveyard dashboard with fictional sample burials
+- `/roadmap` — staged roadmap from public prototype to controlled beta and automation
 - `/hall-of-fame` — fictional demo leaderboard and award preview
 - `/bury-a-coin` — coming-soon preview of the future burial flow
 - `/memorial/sample` — fictional sample memorial page prototype
