@@ -4,6 +4,10 @@ Every dead coin deserves a proper funeral.
 
 This repository contains the first public website for Crypto Graveyard. The current version is a mini graveyard dashboard with sample data only. Wallet addresses, watcher automation, AI eulogies, and collectibles are roadmap items.
 
+## Live Preview
+
+https://crypto-graveyard-ernfuh7ij-crypto-graveyard.vercel.app
+
 ## Getting Started
 
 Install dependencies:
