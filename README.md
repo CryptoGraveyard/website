@@ -13,6 +13,7 @@ https://crypto-graveyard-ernfuh7ij-crypto-graveyard.vercel.app
 - `/` — mini graveyard dashboard with fictional sample burials
 - `/hall-of-fame` — fictional demo leaderboard and award preview
 - `/bury-a-coin` — coming-soon preview of the future burial flow
+- `/memorial/sample` — fictional sample memorial page prototype
 
 ## Getting Started
 

@@ -226,6 +226,12 @@ export default function Home() {
                     <p className="mt-1 text-acid-400">{burial.burial}</p>
                   </div>
                 </div>
+                <Link
+                  href="/memorial/sample"
+                  className="mt-5 inline-flex font-mono text-xs uppercase text-acid-400 hover:text-bone-100"
+                >
+                  View sample memorial →
+                </Link>
               </article>
             ))}
           </div>

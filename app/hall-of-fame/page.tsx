@@ -188,6 +188,13 @@ export default function HallOfFamePage() {
             month-end winners, and future headstone awards. Every value here is fictional sample
             data until wallet tracking and verification are live.
           </p>
+          <Link
+            href="/memorial/sample"
+            className="mt-8 inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow transition hover:bg-bone-100"
+          >
+            <Trophy size={18} aria-hidden="true" />
+            View sample memorial
+          </Link>
         </div>
 
         <div className="terminal-border pixel-corners p-5 shadow-card">
@@ -283,6 +290,14 @@ export default function HallOfFamePage() {
                 <span className="border border-bone-200/15 bg-bone-100/10 px-2 py-1 font-mono text-[11px] uppercase text-bone-300">
                   {entry.category}
                 </span>
+                {entry.rank === 1 ? (
+                  <Link
+                    href="/memorial/sample"
+                    className="font-mono text-[11px] uppercase text-acid-400 hover:text-bone-100"
+                  >
+                    Sample memorial →
+                  </Link>
+                ) : null}
               </div>
             </article>
           ))}
