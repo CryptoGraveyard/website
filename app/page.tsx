@@ -10,6 +10,7 @@ import {
   TvMinimalPlay
 } from "lucide-react";
 import Link from "next/link";
+import { DisclaimerFooter } from "./components/DisclaimerFooter";
 import { SiteNav } from "./components/SiteNav";
 import { roadmapPhases, roadmapStatusCopy } from "./content/roadmap";
 
@@ -381,16 +382,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer id="disclaimer" className="border-t border-bone-200/10 px-5 py-8 sm:px-8 lg:px-12">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-xs leading-6 text-bone-500 md:flex-row">
-          <p className="max-w-3xl">
-            Crypto Graveyard is an entertainment, memorial, and analytics project. Sample data is
-            fictional. Nothing here verifies tax losses, charitable deductions, cost basis, or
-            investment outcomes.
-          </p>
-          <p className="font-mono uppercase text-bone-500">No wallets shown in v0</p>
-        </div>
-      </footer>
+      <DisclaimerFooter id="disclaimer" variant="home" mode="full" />
     </main>
   );
 }

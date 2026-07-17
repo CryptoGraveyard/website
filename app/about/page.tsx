@@ -9,6 +9,7 @@ import {
   Radio,
   ShieldCheck
 } from "lucide-react";
+import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { SiteNav } from "../components/SiteNav";
 
 export const metadata: Metadata = {
@@ -213,13 +214,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <footer className="relative z-10 mx-auto max-w-7xl border-t border-bone-200/10 py-8 text-xs leading-6 text-bone-500">
-        <p>
-          Crypto Graveyard is an entertainment, memorial, and analytics project. It does not verify
-          tax losses, charitable deductions, cost basis, legal ownership, token value, or investment
-          outcomes.
-        </p>
-      </footer>
+      <DisclaimerFooter variant="standard" />
     </main>
   );
 }

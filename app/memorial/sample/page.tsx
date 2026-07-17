@@ -11,6 +11,7 @@ import {
   Sparkles,
   Trophy
 } from "lucide-react";
+import { DisclaimerFooter } from "../../components/DisclaimerFooter";
 import { SiteNav } from "../../components/SiteNav";
 
 export const metadata: Metadata = {
@@ -296,12 +297,7 @@ export default function SampleMemorialPage() {
         </div>
       </section>
 
-      <footer className="relative z-10 mx-auto max-w-7xl border-t border-bone-200/10 py-8 text-xs leading-6 text-bone-500">
-        <p>
-          Crypto Graveyard is an entertainment, memorial, and analytics project. This sample page is
-          not a tax document, appraisal, receipt, charitable substantiation, or blockchain proof.
-        </p>
-      </footer>
+      <DisclaimerFooter variant="sample" />
     </main>
   );
 }

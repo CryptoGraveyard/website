@@ -15,6 +15,7 @@ import {
   Trophy,
   XCircle
 } from "lucide-react";
+import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { SiteNav } from "../components/SiteNav";
 
 export const metadata: Metadata = {
@@ -378,13 +379,7 @@ export default function ReviewProcessPage() {
         </div>
       </section>
 
-      <footer className="relative z-10 mx-auto max-w-7xl border-t border-bone-200/10 py-8 text-xs leading-6 text-bone-500">
-        <p>
-          This review process is a planning page. Crypto Graveyard is not accepting real requests
-          or token transfers through it, and does not verify tax losses, charitable deductions, cost
-          basis, token value, or legal ownership.
-        </p>
-      </footer>
+      <DisclaimerFooter variant="review" />
     </main>
   );
 }

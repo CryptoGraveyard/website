@@ -12,6 +12,7 @@ import {
   Sparkles,
   Trophy
 } from "lucide-react";
+import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { SiteNav } from "../components/SiteNav";
 
 export const metadata: Metadata = {
@@ -270,13 +271,7 @@ export default function BuryCoinPage() {
         </div>
       </section>
 
-      <footer className="relative z-10 mx-auto max-w-7xl border-t border-bone-200/10 py-8 text-xs leading-6 text-bone-500">
-        <p>
-          The burial flow is not live. Crypto Graveyard does not request private keys, seed phrases,
-          or wallet recovery words. It does not verify tax losses, charitable deductions, cost basis,
-          investment outcomes, or legal ownership.
-        </p>
-      </footer>
+      <DisclaimerFooter variant="burial" />
     </main>
   );
 }

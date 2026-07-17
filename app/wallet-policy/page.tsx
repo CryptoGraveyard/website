@@ -12,6 +12,7 @@ import {
   Sparkles,
   Trophy
 } from "lucide-react";
+import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { SiteNav } from "../components/SiteNav";
 
 export const metadata: Metadata = {
@@ -304,13 +305,7 @@ export default function WalletPolicyPage() {
         </div>
       </section>
 
-      <footer className="relative z-10 mx-auto max-w-7xl border-t border-bone-200/10 py-8 text-xs leading-6 text-bone-500">
-        <p>
-          This page is a product plan, not live deposit instructions. Crypto Graveyard does not
-          request private keys, seed phrases, or wallet recovery words, and does not verify tax
-          losses, charitable deductions, cost basis, token value, or legal ownership.
-        </p>
-      </footer>
+      <DisclaimerFooter variant="wallet" />
     </main>
   );
 }

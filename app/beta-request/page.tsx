@@ -12,6 +12,7 @@ import {
   Sparkles,
   Trophy
 } from "lucide-react";
+import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { SiteNav } from "../components/SiteNav";
 
 export const metadata: Metadata = {
@@ -336,13 +337,7 @@ export default function BetaRequestPage() {
         </div>
       </section>
 
-      <footer className="relative z-10 mx-auto max-w-7xl border-t border-bone-200/10 py-8 text-xs leading-6 text-bone-500">
-        <p>
-          This beta request page is a non-submitting prototype. Crypto Graveyard is not accepting
-          real transfers through this page and does not request private keys, seed phrases, wallet
-          recovery words, exchange credentials, or tax-loss representations.
-        </p>
-      </footer>
+      <DisclaimerFooter variant="beta" />
     </main>
   );
 }

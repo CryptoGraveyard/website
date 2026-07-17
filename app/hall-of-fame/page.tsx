@@ -10,6 +10,7 @@ import {
   Sparkles,
   Trophy
 } from "lucide-react";
+import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { SiteNav } from "../components/SiteNav";
 
 export const metadata: Metadata = {
@@ -331,13 +332,7 @@ export default function HallOfFamePage() {
         </div>
       </section>
 
-      <footer className="relative z-10 mx-auto max-w-7xl border-t border-bone-200/10 py-8 text-xs leading-6 text-bone-500">
-        <p>
-          Hall of Fame data is fictional demo content. Crypto Graveyard is an entertainment,
-          memorial, and analytics project, not a tax advisor, broker, exchange, charity, or
-          valuation authority.
-        </p>
-      </footer>
+      <DisclaimerFooter variant="demo" />
     </main>
   );
 }

@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   Sparkles
 } from "lucide-react";
+import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { SiteNav } from "../components/SiteNav";
 import { roadmapPhases, roadmapStatusCopy, type RoadmapStatus } from "../content/roadmap";
 
@@ -215,12 +216,7 @@ export default function RoadmapPage() {
         </div>
       </section>
 
-      <footer className="relative z-10 mx-auto max-w-7xl border-t border-bone-200/10 py-8 text-xs leading-6 text-bone-500">
-        <p>
-          This roadmap is a planning artifact. It does not publish receiving wallets, accept token
-          transfers, verify tax losses, or promise implementation timelines.
-        </p>
-      </footer>
+      <DisclaimerFooter variant="roadmap" />
     </main>
   );
 }
