@@ -13,6 +13,7 @@ import {
   Trophy
 } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
+import { SectionIntro } from "../components/SectionIntro";
 import { SiteNav } from "../components/SiteNav";
 import { TerminalStatusPanel } from "../components/TerminalStatusPanel";
 
@@ -141,18 +142,11 @@ export default function BuryCoinPage() {
       </section>
 
       <section className="relative z-10 mx-auto max-w-7xl py-12">
-        <div className="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
-            <p className="font-mono text-xs uppercase text-acid-400">Future flow</p>
-            <h2 className="mt-2 font-display text-3xl font-bold text-bone-100 sm:text-5xl">
-              How a burial will work
-            </h2>
-          </div>
-          <p className="max-w-md text-sm leading-6 text-bone-500">
-            The live version should feel ceremonial, but the underlying flow has to be careful,
-            verifiable, and impossible to confuse with tax advice.
-          </p>
-        </div>
+        <SectionIntro
+          eyebrow="Future flow"
+          title="How a burial will work"
+          copy="The live version should feel ceremonial, but the underlying flow has to be careful, verifiable, and impossible to confuse with tax advice."
+        />
 
         <div className="grid gap-4 lg:grid-cols-4">
           {steps.map((step) => {
@@ -207,12 +201,10 @@ export default function BuryCoinPage() {
       </section>
 
       <section className="relative z-10 mx-auto max-w-7xl py-12">
-        <div className="mb-7">
-          <p className="font-mono text-xs uppercase text-acid-400">What a burial unlocks</p>
-          <h2 className="mt-2 font-display text-3xl font-bold text-bone-100 sm:text-5xl">
-            Memorials first. Collectibles later.
-          </h2>
-        </div>
+        <SectionIntro
+          eyebrow="What a burial unlocks"
+          title="Memorials first. Collectibles later."
+        />
         <div className="grid gap-4 lg:grid-cols-3">
           {futureOutputs.map((output, index) => (
             <article key={output.label} className="terminal-border p-6">

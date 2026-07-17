@@ -16,6 +16,7 @@ import {
   XCircle
 } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
+import { SectionIntro } from "../components/SectionIntro";
 import { SiteNav } from "../components/SiteNav";
 import { TerminalStatusPanel } from "../components/TerminalStatusPanel";
 
@@ -212,18 +213,11 @@ export default function ReviewProcessPage() {
       </section>
 
       <section className="relative z-10 mx-auto max-w-7xl py-12">
-        <div className="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
-            <p className="font-mono text-xs uppercase text-acid-400">Status model</p>
-            <h2 className="mt-2 font-display text-3xl font-bold text-bone-100 sm:text-5xl">
-              Request lifecycle
-            </h2>
-          </div>
-          <p className="max-w-md text-sm leading-6 text-bone-500">
-            These are the states the backend should eventually support before any real user can
-            complete a beta burial.
-          </p>
-        </div>
+        <SectionIntro
+          eyebrow="Status model"
+          title="Request lifecycle"
+          copy="These are the states the backend should eventually support before any real user can complete a beta burial."
+        />
 
         <div className="grid gap-4 lg:grid-cols-3">
           {statusFlow.map((item) => {
@@ -275,18 +269,11 @@ export default function ReviewProcessPage() {
       </section>
 
       <section className="relative z-10 mx-auto max-w-7xl py-12">
-        <div className="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
-            <p className="font-mono text-xs uppercase text-acid-400">Admin queue preview</p>
-            <h2 className="mt-2 font-display text-3xl font-bold text-bone-100 sm:text-5xl">
-              What the first review screen might show
-            </h2>
-          </div>
-          <p className="max-w-md text-sm leading-6 text-bone-500">
-            Sample rows only. This is the human-in-the-loop layer before wallet instructions,
-            watcher automation, and public memorial generation.
-          </p>
-        </div>
+        <SectionIntro
+          eyebrow="Admin queue preview"
+          title="What the first review screen might show"
+          copy="Sample rows only. This is the human-in-the-loop layer before wallet instructions, watcher automation, and public memorial generation."
+        />
 
         <div className="space-y-4">
           {sampleQueue.map((row) => (

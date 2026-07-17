@@ -11,6 +11,7 @@ import {
   Trophy
 } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
+import { SectionIntro } from "../components/SectionIntro";
 import { SiteNav } from "../components/SiteNav";
 
 export const metadata: Metadata = {
@@ -227,18 +228,11 @@ export default function HallOfFamePage() {
       </section>
 
       <section className="relative z-10 mx-auto max-w-7xl py-12">
-        <div className="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
-            <p className="font-mono text-xs uppercase text-acid-400">Leaderboard</p>
-            <h2 className="mt-2 font-display text-3xl font-bold text-bone-100 sm:text-5xl">
-              Biggest demo burials
-            </h2>
-          </div>
-          <p className="max-w-md text-sm leading-6 text-bone-500">
-            Later, each row can link to a permanent burial page with wallet evidence, value method,
-            eulogy, and optional certificate.
-          </p>
-        </div>
+        <SectionIntro
+          eyebrow="Leaderboard"
+          title="Biggest demo burials"
+          copy="Later, each row can link to a permanent burial page with wallet evidence, value method, eulogy, and optional certificate."
+        />
 
         <div className="space-y-4">
           {leaderboard.map((entry) => (

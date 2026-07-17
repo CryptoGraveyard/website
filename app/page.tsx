@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { DisclaimerFooter } from "./components/DisclaimerFooter";
+import { SectionIntro } from "./components/SectionIntro";
 import { SiteNav } from "./components/SiteNav";
 import { roadmapPhases, roadmapStatusCopy } from "./content/roadmap";
 
@@ -197,18 +198,11 @@ export default function Home() {
 
       <section className="px-5 py-14 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <p className="font-mono text-xs uppercase text-acid-400">Explore the cemetery</p>
-              <h2 className="mt-2 font-display text-3xl font-bold text-bone-100 sm:text-5xl">
-                A tiny product, not just a landing page
-              </h2>
-            </div>
-            <p className="max-w-md text-sm leading-6 text-bone-500">
-              The first version now has a demo dashboard, leaderboard, burial flow preview, and
-              memorial artifact so visitors can understand the whole loop.
-            </p>
-          </div>
+          <SectionIntro
+            eyebrow="Explore the cemetery"
+            title="A tiny product, not just a landing page"
+            copy="The first version now has a demo dashboard, leaderboard, burial flow preview, and memorial artifact so visitors can understand the whole loop."
+          />
 
           <div className="grid gap-4 lg:grid-cols-3 xl:grid-cols-6">
             {exploreCards.map((card, index) => (
@@ -250,18 +244,11 @@ export default function Home() {
 
       <section id="burials" className="px-5 py-14 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <p className="font-mono text-xs uppercase text-acid-400">Sample data</p>
-              <h2 className="mt-2 font-display text-3xl font-bold text-bone-100 sm:text-5xl">
-                Recent burials from the demo cemetery
-              </h2>
-            </div>
-            <p className="max-w-md text-sm leading-6 text-bone-500">
-              These are fictional sample entries used to shape the product before wallets and
-              verification systems are connected.
-            </p>
-          </div>
+          <SectionIntro
+            eyebrow="Sample data"
+            title="Recent burials from the demo cemetery"
+            copy="These are fictional sample entries used to shape the product before wallets and verification systems are connected."
+          />
 
           <div className="grid gap-4 lg:grid-cols-3">
             {sampleBurials.map((burial) => (

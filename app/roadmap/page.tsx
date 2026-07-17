@@ -13,6 +13,7 @@ import {
   Sparkles
 } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
+import { SectionIntro } from "../components/SectionIntro";
 import { SiteNav } from "../components/SiteNav";
 import { roadmapPhases, roadmapStatusCopy, type RoadmapStatus } from "../content/roadmap";
 
@@ -107,18 +108,11 @@ export default function RoadmapPage() {
       </section>
 
       <section className="relative z-10 mx-auto max-w-7xl py-12">
-        <div className="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
-            <p className="font-mono text-xs uppercase text-acid-400">Phases</p>
-            <h2 className="mt-2 font-display text-3xl font-bold text-bone-100 sm:text-5xl">
-              What is built, what is previewed, what waits
-            </h2>
-          </div>
-          <p className="max-w-md text-sm leading-6 text-bone-500">
-            The roadmap separates visible prototypes from operational systems. That keeps the
-            project exciting without accidentally opening real transfers too early.
-          </p>
-        </div>
+        <SectionIntro
+          eyebrow="Phases"
+          title="What is built, what is previewed, what waits"
+          copy="The roadmap separates visible prototypes from operational systems. That keeps the project exciting without accidentally opening real transfers too early."
+        />
 
         <div className="space-y-5">
           {roadmapPhases.map((phase, index) => {

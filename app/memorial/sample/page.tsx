@@ -12,6 +12,7 @@ import {
   Trophy
 } from "lucide-react";
 import { DisclaimerFooter } from "../../components/DisclaimerFooter";
+import { SectionIntro } from "../../components/SectionIntro";
 import { SiteNav } from "../../components/SiteNav";
 
 export const metadata: Metadata = {
@@ -216,18 +217,11 @@ export default function SampleMemorialPage() {
       </section>
 
       <section className="relative z-10 mx-auto max-w-7xl py-12">
-        <div className="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
-            <p className="font-mono text-xs uppercase text-acid-400">Confidence labels</p>
-            <h2 className="mt-2 font-display text-3xl font-bold text-bone-100 sm:text-5xl">
-              Label the evidence, not the fantasy.
-            </h2>
-          </div>
-          <p className="max-w-md text-sm leading-6 text-bone-500">
-            Memorial pages should make it obvious which claims are on-chain, estimated, privately
-            documented, or unknown.
-          </p>
-        </div>
+        <SectionIntro
+          eyebrow="Confidence labels"
+          title="Label the evidence, not the fantasy."
+          copy="Memorial pages should make it obvious which claims are on-chain, estimated, privately documented, or unknown."
+        />
         <div className="grid gap-4 lg:grid-cols-4">
           {confidenceLabels.map((item) => (
             <article key={item.label} className="terminal-border p-5">
