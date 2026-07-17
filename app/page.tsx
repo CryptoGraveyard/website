@@ -52,6 +52,7 @@ const statCards = [
 const roadmap = [
   "Receiving-wallet policy",
   "Manual beta request",
+  "Review queue process",
   "Live wallet watcher",
   "AI eulogies",
   "SBT memorial profiles",

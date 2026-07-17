@@ -124,11 +124,11 @@ export default function WalletPolicyPage() {
               Beta request preview
             </Link>
             <Link
-              href="/about#safety"
+              href="/review-process"
               className="inline-flex items-center justify-center gap-2 border border-bone-200/25 bg-grave-800 px-5 py-3 font-mono text-sm font-semibold uppercase text-bone-100 transition hover:border-acid-400 hover:text-acid-400"
             >
               <ShieldCheck size={18} aria-hidden="true" />
-              Safety rules
+              Review process
             </Link>
           </div>
         </div>

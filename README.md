@@ -16,6 +16,7 @@ https://cryptograveyard.io
 - `/memorial/sample` — fictional sample memorial page prototype
 - `/wallet-policy` — phased receiving-wallet policy and pre-launch safety plan
 - `/beta-request` — non-submitting manual beta request form preview
+- `/review-process` — public blueprint for future beta request review statuses and checks
 - `/about` — mission, launch status, and wallet safety rules
 
 ## Getting Started
