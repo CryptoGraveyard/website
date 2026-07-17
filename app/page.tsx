@@ -105,6 +105,9 @@ export default function Home() {
             <Link className="hover:text-acid-400" href="/hall-of-fame">
               Hall of Fame
             </Link>
+            <Link className="hover:text-acid-400" href="/bury-a-coin">
+              Bury a Coin
+            </Link>
             <a className="hover:text-acid-400" href="#roadmap">
               Roadmap
             </a>
@@ -142,13 +145,13 @@ export default function Home() {
                 <TvMinimalPlay size={18} aria-hidden="true" />
                 Follow YouTube
               </a>
-              <a
+              <Link
                 className="inline-flex items-center justify-center gap-2 border border-bone-200/25 bg-grave-800 px-5 py-3 font-mono text-sm font-semibold uppercase text-bone-100 transition hover:border-acid-400 hover:text-acid-400"
-                href="#burials"
+                href="/bury-a-coin"
               >
                 <BellRing size={18} aria-hidden="true" />
                 Bury a coin soon
-              </a>
+              </Link>
             </div>
           </div>
 

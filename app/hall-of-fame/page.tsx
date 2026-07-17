@@ -163,11 +163,11 @@ export default function HallOfFamePage() {
           <span className="font-display text-lg font-semibold text-bone-100">Crypto Graveyard</span>
         </Link>
         <Link
-          href="/"
+          href="/bury-a-coin"
           className="inline-flex items-center gap-2 border border-bone-200/15 bg-grave-900/80 px-3 py-2 font-mono text-xs uppercase text-bone-300 hover:border-acid-400 hover:text-acid-400"
         >
-          <ArrowLeft size={14} aria-hidden="true" />
-          Dashboard
+          <BellRing size={14} aria-hidden="true" />
+          Bury a Coin
         </Link>
       </nav>
 
@@ -319,10 +319,13 @@ export default function HallOfFamePage() {
               <ArrowLeft size={18} aria-hidden="true" />
               Back home
             </Link>
-            <span className="inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow">
+            <Link
+              href="/bury-a-coin"
+              className="inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow"
+            >
               <BellRing size={18} aria-hidden="true" />
               Bury a coin soon
-            </span>
+            </Link>
           </div>
         </div>
       </section>
