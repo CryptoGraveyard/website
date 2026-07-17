@@ -8,6 +8,11 @@ This repository contains the first public website for Crypto Graveyard. The curr
 
 https://crypto-graveyard-ernfuh7ij-crypto-graveyard.vercel.app
 
+## Current Pages
+
+- `/` — mini graveyard dashboard with fictional sample burials
+- `/hall-of-fame` — fictional demo leaderboard and award preview
+
 ## Getting Started
 
 Install dependencies:

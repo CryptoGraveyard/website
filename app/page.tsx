@@ -9,6 +9,7 @@ import {
   Trophy,
   TvMinimalPlay
 } from "lucide-react";
+import Link from "next/link";
 
 const sampleBurials = [
   {
@@ -101,6 +102,9 @@ export default function Home() {
             <a className="hover:text-acid-400" href="#burials">
               Sample burials
             </a>
+            <Link className="hover:text-acid-400" href="/hall-of-fame">
+              Hall of Fame
+            </Link>
             <a className="hover:text-acid-400" href="#roadmap">
               Roadmap
             </a>
@@ -270,6 +274,12 @@ export default function Home() {
             <p className="mt-3 text-sm leading-6 text-bone-500">
               Leaderboards will separate entertainment metrics from tax facts.
             </p>
+            <Link
+              href="/hall-of-fame"
+              className="mt-5 inline-flex font-mono text-xs uppercase text-acid-400 hover:text-bone-100"
+            >
+              View demo leaderboard →
+            </Link>
           </div>
           <div className="border border-violet-400/20 bg-violet-400/10 p-6">
             <Flame className="text-violet-400" size={24} aria-hidden="true" />
