@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { SiteNav } from "../components/SiteNav";
+import { TerminalStatusPanel } from "../components/TerminalStatusPanel";
 
 export const metadata: Metadata = {
   title: "Wallet Plan | Crypto Graveyard",
@@ -134,31 +135,20 @@ export default function WalletPolicyPage() {
           </div>
         </div>
 
-        <div className="terminal-border pixel-corners p-5 shadow-card">
-          <div className="mb-4 flex items-center justify-between border-b border-acid-400/18 pb-3 font-mono text-xs uppercase text-bone-500">
-            <span>Recommended mode</span>
-            <span className="text-acid-400">manual beta</span>
-          </div>
-          <div className="space-y-3 font-mono text-xs leading-6 text-bone-200/80">
-            <p>
-              <span className="text-acid-400">&gt;</span> wallets.public = false
-            </p>
-            <p>
-              <span className="text-acid-400">&gt;</span> tester.approval_required = true
-            </p>
-            <p>
-              <span className="text-acid-400">&gt;</span> unsupported_tokens.auto_accept = false
-            </p>
-            <p>
-              <span className="text-acid-400">&gt;</span> tax_claims.allowed = never
-            </p>
-          </div>
-          <div className="mt-5 border border-blood-500/25 bg-blood-500/10 p-4 text-sm leading-6 text-bone-200/80">
-            <strong className="font-mono text-xs uppercase text-blood-500">Gate rule:</strong>{" "}
-            until official wallets are published on this domain, no one should send tokens claiming
-            they are “burying” them with Crypto Graveyard.
-          </div>
-        </div>
+        <TerminalStatusPanel
+          title="Recommended mode"
+          status="manual beta"
+          lines={[
+            "wallets.public = false",
+            "tester.approval_required = true",
+            "unsupported_tokens.auto_accept = false",
+            "tax_claims.allowed = never"
+          ]}
+          warningLabel="Gate rule"
+        >
+          Until official wallets are published on this domain, no one should send tokens claiming
+          they are burying them with Crypto Graveyard.
+        </TerminalStatusPanel>
       </section>
 
       <section className="relative z-10 mx-auto max-w-7xl py-12">

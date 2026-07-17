@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { SiteNav } from "../components/SiteNav";
+import { TerminalStatusPanel } from "../components/TerminalStatusPanel";
 
 export const metadata: Metadata = {
   title: "Bury a Coin | Crypto Graveyard",
@@ -123,31 +124,20 @@ export default function BuryCoinPage() {
           </div>
         </div>
 
-        <div className="terminal-border pixel-corners p-5 shadow-card">
-          <div className="mb-4 flex items-center justify-between border-b border-acid-400/18 pb-3 font-mono text-xs uppercase text-bone-500">
-            <span>Burial terminal</span>
-            <span className="text-acid-400">not live</span>
-          </div>
-          <div className="space-y-3 font-mono text-xs leading-6 text-bone-200/80">
-            <p>
-              <span className="text-acid-400">&gt;</span> wallets.published = false
-            </p>
-            <p>
-              <span className="text-acid-400">&gt;</span> submissions.open = false
-            </p>
-            <p>
-              <span className="text-acid-400">&gt;</span> private.keys.requested = never
-            </p>
-            <p>
-              <span className="text-acid-400">&gt;</span> tax.advice.provided = false
-            </p>
-          </div>
-          <div className="mt-5 border border-blood-500/25 bg-blood-500/10 p-4 text-sm leading-6 text-bone-200/80">
-            <strong className="font-mono text-xs uppercase text-blood-500">Safety note:</strong>{" "}
-            If anyone claims to be Crypto Graveyard and asks for seed phrases, private keys, or
-            wallet recovery words, that is not us. That is a digital raccoon in a trench coat.
-          </div>
-        </div>
+        <TerminalStatusPanel
+          title="Burial terminal"
+          status="not live"
+          lines={[
+            "wallets.published = false",
+            "submissions.open = false",
+            "private.keys.requested = never",
+            "tax.advice.provided = false"
+          ]}
+          warningLabel="Safety note"
+        >
+          If anyone claims to be Crypto Graveyard and asks for seed phrases, private keys, or
+          wallet recovery words, that is not us. That is a digital raccoon in a trench coat.
+        </TerminalStatusPanel>
       </section>
 
       <section className="relative z-10 mx-auto max-w-7xl py-12">

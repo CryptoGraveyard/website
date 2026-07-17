@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { SiteNav } from "../components/SiteNav";
+import { TerminalStatusPanel } from "../components/TerminalStatusPanel";
 
 export const metadata: Metadata = {
   title: "Review Process | Crypto Graveyard",
@@ -195,30 +196,19 @@ export default function ReviewProcessPage() {
           </div>
         </div>
 
-        <div className="terminal-border pixel-corners p-5 shadow-card">
-          <div className="mb-4 flex items-center justify-between border-b border-acid-400/18 pb-3 font-mono text-xs uppercase text-bone-500">
-            <span>Review terminal</span>
-            <span className="text-acid-400">planned</span>
-          </div>
-          <div className="space-y-3 font-mono text-xs leading-6 text-bone-200/80">
-            <p>
-              <span className="text-acid-400">&gt;</span> request.storage = planned
-            </p>
-            <p>
-              <span className="text-acid-400">&gt;</span> admin.queue = mockup
-            </p>
-            <p>
-              <span className="text-acid-400">&gt;</span> auto_wallet_instructions = false
-            </p>
-            <p>
-              <span className="text-acid-400">&gt;</span> reviewer.required = true
-            </p>
-          </div>
-          <div className="mt-5 border border-blood-500/25 bg-blood-500/10 p-4 text-sm leading-6 text-bone-200/80">
-            <strong className="font-mono text-xs uppercase text-blood-500">Safety default:</strong>{" "}
-            every new request starts closed. The cemetery does not hand out shovels automatically.
-          </div>
-        </div>
+        <TerminalStatusPanel
+          title="Review terminal"
+          status="planned"
+          lines={[
+            "request.storage = planned",
+            "admin.queue = mockup",
+            "auto_wallet_instructions = false",
+            "reviewer.required = true"
+          ]}
+          warningLabel="Safety default"
+        >
+          Every new request starts closed. The cemetery does not hand out shovels automatically.
+        </TerminalStatusPanel>
       </section>
 
       <section className="relative z-10 mx-auto max-w-7xl py-12">

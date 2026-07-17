@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { SiteNav } from "../components/SiteNav";
+import { TerminalStatusPanel } from "../components/TerminalStatusPanel";
 
 export const metadata: Metadata = {
   title: "Beta Request | Crypto Graveyard",
@@ -149,31 +150,20 @@ export default function BetaRequestPage() {
           </div>
         </div>
 
-        <div className="terminal-border pixel-corners p-5 shadow-card">
-          <div className="mb-4 flex items-center justify-between border-b border-acid-400/18 pb-3 font-mono text-xs uppercase text-bone-500">
-            <span>Request terminal</span>
-            <span className="text-acid-400">preview only</span>
-          </div>
-          <div className="space-y-3 font-mono text-xs leading-6 text-bone-200/80">
-            <p>
-              <span className="text-acid-400">&gt;</span> form.submissions = disabled
-            </p>
-            <p>
-              <span className="text-acid-400">&gt;</span> wallets.generated = false
-            </p>
-            <p>
-              <span className="text-acid-400">&gt;</span> beta.review_required = true
-            </p>
-            <p>
-              <span className="text-acid-400">&gt;</span> secrets.requested = never
-            </p>
-          </div>
-          <div className="mt-5 border border-blood-500/25 bg-blood-500/10 p-4 text-sm leading-6 text-bone-200/80">
-            <strong className="font-mono text-xs uppercase text-blood-500">Not live:</strong>{" "}
-            this page is a mockup. Nobody should send tokens until official instructions are
-            published on CryptoGraveyard.io.
-          </div>
-        </div>
+        <TerminalStatusPanel
+          title="Request terminal"
+          status="preview only"
+          lines={[
+            "form.submissions = disabled",
+            "wallets.generated = false",
+            "beta.review_required = true",
+            "secrets.requested = never"
+          ]}
+          warningLabel="Not live"
+        >
+          This page is a mockup. Nobody should send tokens until official instructions are
+          published on CryptoGraveyard.io.
+        </TerminalStatusPanel>
       </section>
 
       <section className="relative z-10 mx-auto grid max-w-7xl gap-5 py-12 lg:grid-cols-[1.02fr_0.98fr]">
