@@ -7,10 +7,10 @@ import {
   Crown,
   Flame,
   Medal,
-  Skull,
   Sparkles,
   Trophy
 } from "lucide-react";
+import { SiteNav } from "../components/SiteNav";
 
 export const metadata: Metadata = {
   title: "Hall of Fame | Crypto Graveyard",
@@ -155,21 +155,7 @@ export default function HallOfFamePage() {
     <main className="min-h-screen overflow-hidden px-5 py-6 sm:px-8 lg:px-12">
       <div className="graveyard-grid pointer-events-none fixed inset-0 opacity-35" />
 
-      <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-4">
-        <Link className="flex items-center gap-3" href="/" aria-label="Back to Crypto Graveyard home">
-          <span className="grid h-10 w-10 place-items-center border border-acid-400/35 bg-grave-900 text-acid-400 pixel-shadow">
-            <Skull size={20} aria-hidden="true" />
-          </span>
-          <span className="font-display text-lg font-semibold text-bone-100">Crypto Graveyard</span>
-        </Link>
-        <Link
-          href="/bury-a-coin"
-          className="inline-flex items-center gap-2 border border-bone-200/15 bg-grave-900/80 px-3 py-2 font-mono text-xs uppercase text-bone-300 hover:border-acid-400 hover:text-acid-400"
-        >
-          <BellRing size={14} aria-hidden="true" />
-          Bury a Coin
-        </Link>
-      </nav>
+      <SiteNav current="hall" />
 
       <section className="relative z-10 mx-auto grid max-w-7xl gap-8 pb-10 pt-16 lg:grid-cols-[1fr_0.9fr] lg:pt-24">
         <div>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  ArrowLeft,
   BadgeCheck,
   BellRing,
   Coins,
@@ -12,6 +11,7 @@ import {
   Sparkles,
   Trophy
 } from "lucide-react";
+import { SiteNav } from "../components/SiteNav";
 
 export const metadata: Metadata = {
   title: "Bury a Coin | Crypto Graveyard",
@@ -83,29 +83,7 @@ export default function BuryCoinPage() {
     <main className="min-h-screen overflow-hidden px-5 py-6 sm:px-8 lg:px-12">
       <div className="graveyard-grid pointer-events-none fixed inset-0 opacity-35" />
 
-      <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-4">
-        <Link className="flex items-center gap-3" href="/" aria-label="Back to Crypto Graveyard home">
-          <span className="grid h-10 w-10 place-items-center border border-acid-400/35 bg-grave-900 text-acid-400 pixel-shadow">
-            <Skull size={20} aria-hidden="true" />
-          </span>
-          <span className="font-display text-lg font-semibold text-bone-100">Crypto Graveyard</span>
-        </Link>
-        <div className="flex items-center gap-2">
-          <Link
-            href="/hall-of-fame"
-            className="hidden border border-bone-200/15 bg-grave-900/80 px-3 py-2 font-mono text-xs uppercase text-bone-300 hover:border-acid-400 hover:text-acid-400 sm:inline-flex"
-          >
-            Hall of Fame
-          </Link>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 border border-bone-200/15 bg-grave-900/80 px-3 py-2 font-mono text-xs uppercase text-bone-300 hover:border-acid-400 hover:text-acid-400"
-          >
-            <ArrowLeft size={14} aria-hidden="true" />
-            Dashboard
-          </Link>
-        </div>
-      </nav>
+      <SiteNav current="bury" />
 
       <section className="relative z-10 mx-auto grid max-w-7xl gap-8 pb-10 pt-16 lg:grid-cols-[1fr_0.88fr] lg:pt-24">
         <div>

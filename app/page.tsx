@@ -5,11 +5,11 @@ import {
   Flame,
   Ghost,
   Radio,
-  Skull,
   Trophy,
   TvMinimalPlay
 } from "lucide-react";
 import Link from "next/link";
+import { SiteNav } from "./components/SiteNav";
 
 const sampleBurials = [
   {
@@ -55,6 +55,27 @@ const roadmap = [
   "Randomized headstone NFTs"
 ];
 
+const exploreCards = [
+  {
+    title: "Hall of Fame",
+    href: "/hall-of-fame",
+    eyebrow: "Demo leaderboard",
+    copy: "Browse fictional awards, biggest round trips, and the leaderboard language that keeps entertainment metrics separate from tax facts."
+  },
+  {
+    title: "Bury a Coin",
+    href: "/bury-a-coin",
+    eyebrow: "Coming soon flow",
+    copy: "Preview the future user journey for wallet proof, official receiving wallets, memorial pages, and certificates."
+  },
+  {
+    title: "Sample Memorial",
+    href: "/memorial/sample",
+    eyebrow: "Shareable artifact",
+    copy: "See what a burial can become: a public record, eulogy, confidence labels, timeline, and certificate preview."
+  }
+];
+
 function PixelHeadstone({
   color,
   label
@@ -91,31 +112,7 @@ export default function Home() {
         <div className="graveyard-grid pointer-events-none absolute inset-0 opacity-70" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-grave-950 via-grave-950/80 to-transparent" />
 
-        <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-4">
-          <a className="flex items-center gap-3" href="#top" aria-label="Crypto Graveyard home">
-            <span className="grid h-10 w-10 place-items-center border border-acid-400/35 bg-grave-900 text-acid-400 pixel-shadow">
-              <Skull size={20} aria-hidden="true" />
-            </span>
-            <span className="font-display text-lg font-semibold text-bone-100">Crypto Graveyard</span>
-          </a>
-          <div className="hidden items-center gap-6 font-mono text-xs uppercase text-bone-500 md:flex">
-            <a className="hover:text-acid-400" href="#burials">
-              Sample burials
-            </a>
-            <Link className="hover:text-acid-400" href="/hall-of-fame">
-              Hall of Fame
-            </Link>
-            <Link className="hover:text-acid-400" href="/bury-a-coin">
-              Bury a Coin
-            </Link>
-            <a className="hover:text-acid-400" href="#roadmap">
-              Roadmap
-            </a>
-            <a className="hover:text-acid-400" href="#disclaimer">
-              Disclaimer
-            </a>
-          </div>
-        </nav>
+        <SiteNav current="home" />
 
         <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 pb-8 pt-16 lg:grid-cols-[1.02fr_0.98fr] lg:pt-24">
           <div>
@@ -180,6 +177,53 @@ export default function Home() {
                 <span className="text-acid-400">&gt;</span> tax.loss.verified = false
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-14 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <p className="font-mono text-xs uppercase text-acid-400">Explore the cemetery</p>
+              <h2 className="mt-2 font-display text-3xl font-bold text-bone-100 sm:text-5xl">
+                A tiny product, not just a landing page
+              </h2>
+            </div>
+            <p className="max-w-md text-sm leading-6 text-bone-500">
+              The first version now has a demo dashboard, leaderboard, burial flow preview, and
+              memorial artifact so visitors can understand the whole loop.
+            </p>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-3">
+            {exploreCards.map((card, index) => (
+              <Link
+                key={card.href}
+                href={card.href}
+                className="group border border-bone-200/10 bg-grave-900/75 p-6 shadow-card transition hover:border-acid-400/50"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="font-mono text-xs uppercase text-acid-400">{card.eyebrow}</p>
+                    <h3 className="mt-2 font-display text-3xl font-bold text-bone-100">
+                      {card.title}
+                    </h3>
+                  </div>
+                  {index === 0 ? (
+                    <Trophy className="text-acid-400" size={24} aria-hidden="true" />
+                  ) : index === 1 ? (
+                    <BellRing className="text-violet-400" size={24} aria-hidden="true" />
+                  ) : (
+                    <Ghost className="text-blood-500" size={24} aria-hidden="true" />
+                  )}
+                </div>
+                <p className="mt-4 text-sm leading-6 text-bone-500">{card.copy}</p>
+                <p className="mt-5 font-mono text-xs uppercase text-acid-400 group-hover:text-bone-100">
+                  Open page →
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
