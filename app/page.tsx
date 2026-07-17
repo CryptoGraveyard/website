@@ -73,6 +73,12 @@ const exploreCards = [
     href: "/memorial/sample",
     eyebrow: "Shareable artifact",
     copy: "See what a burial can become: a public record, eulogy, confidence labels, timeline, and certificate preview."
+  },
+  {
+    title: "About & Safety",
+    href: "/about",
+    eyebrow: "Trust layer",
+    copy: "Read the mission, launch status, wallet safety rules, and the bright-line disclaimers before any real burial flow exists."
   }
 ];
 
@@ -196,7 +202,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-3">
+          <div className="grid gap-4 lg:grid-cols-4">
             {exploreCards.map((card, index) => (
               <Link
                 key={card.href}
@@ -214,8 +220,10 @@ export default function Home() {
                     <Trophy className="text-acid-400" size={24} aria-hidden="true" />
                   ) : index === 1 ? (
                     <BellRing className="text-violet-400" size={24} aria-hidden="true" />
-                  ) : (
+                  ) : index === 2 ? (
                     <Ghost className="text-blood-500" size={24} aria-hidden="true" />
+                  ) : (
+                    <BadgeCheck className="text-bone-100" size={24} aria-hidden="true" />
                   )}
                 </div>
                 <p className="mt-4 text-sm leading-6 text-bone-500">{card.copy}</p>

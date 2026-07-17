@@ -2,9 +2,16 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cryptograveyard.io"),
   title: "Crypto Graveyard",
   description:
     "A darkly funny memorial dashboard for forgotten cryptocurrencies, sample burials, and the future headstone economy.",
+  alternates: {
+    canonical: "/"
+  },
+  icons: {
+    icon: "/favicon.svg"
+  },
   openGraph: {
     title: "Crypto Graveyard",
     description: "Every dead coin deserves a proper funeral.",

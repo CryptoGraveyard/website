@@ -6,7 +6,7 @@ This repository contains the first public website for Crypto Graveyard. The curr
 
 ## Live Preview
 
-https://crypto-graveyard-ernfuh7ij-crypto-graveyard.vercel.app
+https://cryptograveyard.io
 
 ## Current Pages
 
@@ -14,6 +14,7 @@ https://crypto-graveyard-ernfuh7ij-crypto-graveyard.vercel.app
 - `/hall-of-fame` — fictional demo leaderboard and award preview
 - `/bury-a-coin` — coming-soon preview of the future burial flow
 - `/memorial/sample` — fictional sample memorial page prototype
+- `/about` — mission, launch status, and wallet safety rules
 
 ## Getting Started
 
@@ -41,3 +42,4 @@ pnpm build
 - No wallet addresses are shown yet.
 - The site does not verify tax losses, deductions, cost basis, or investment outcomes.
 - Primary calls to action are following the YouTube channel and teasing the future burial flow.
+- The production domain is `https://cryptograveyard.io`.
