@@ -49,6 +49,7 @@ const statCards = [
 ];
 
 const roadmap = [
+  "Receiving-wallet policy",
   "Live wallet watcher",
   "AI eulogies",
   "SBT memorial profiles",
@@ -67,6 +68,12 @@ const exploreCards = [
     href: "/bury-a-coin",
     eyebrow: "Coming soon flow",
     copy: "Preview the future user journey for wallet proof, official receiving wallets, memorial pages, and certificates."
+  },
+  {
+    title: "Wallet Plan",
+    href: "/wallet-policy",
+    eyebrow: "Pre-launch policy",
+    copy: "See the recommended manual-review-first approach before any official receiving wallets are published."
   },
   {
     title: "Sample Memorial",
@@ -202,7 +209,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-4">
+          <div className="grid gap-4 lg:grid-cols-3 xl:grid-cols-5">
             {exploreCards.map((card, index) => (
               <Link
                 key={card.href}
@@ -221,6 +228,8 @@ export default function Home() {
                   ) : index === 1 ? (
                     <BellRing className="text-violet-400" size={24} aria-hidden="true" />
                   ) : index === 2 ? (
+                    <BadgeCheck className="text-bone-100" size={24} aria-hidden="true" />
+                  ) : index === 3 ? (
                     <Ghost className="text-blood-500" size={24} aria-hidden="true" />
                   ) : (
                     <BadgeCheck className="text-bone-100" size={24} aria-hidden="true" />

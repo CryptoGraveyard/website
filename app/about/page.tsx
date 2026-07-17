@@ -7,10 +7,7 @@ import {
   Ghost,
   LockKeyhole,
   Radio,
-  ShieldCheck,
-  Skull,
-  Sparkles,
-  Trophy
+  ShieldCheck
 } from "lucide-react";
 import { SiteNav } from "../components/SiteNav";
 
@@ -99,11 +96,11 @@ export default function AboutPage() {
               Preview burial flow
             </Link>
             <Link
-              href="/memorial/sample"
+              href="/wallet-policy"
               className="inline-flex items-center justify-center gap-2 border border-bone-200/25 bg-grave-800 px-5 py-3 font-mono text-sm font-semibold uppercase text-bone-100 transition hover:border-acid-400 hover:text-acid-400"
             >
-              <Skull size={18} aria-hidden="true" />
-              View sample memorial
+              <LockKeyhole size={18} aria-hidden="true" />
+              Wallet plan
             </Link>
           </div>
         </div>
@@ -197,11 +194,11 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/hall-of-fame"
+              href="/wallet-policy"
               className="inline-flex items-center justify-center gap-2 border border-bone-200/25 bg-grave-800 px-5 py-3 font-mono text-sm font-semibold uppercase text-bone-100 transition hover:border-acid-400 hover:text-acid-400"
             >
-              <Trophy size={18} aria-hidden="true" />
-              Hall of Fame
+              <LockKeyhole size={18} aria-hidden="true" />
+              Wallet plan
             </Link>
             <a
               className="inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow transition hover:bg-bone-100"

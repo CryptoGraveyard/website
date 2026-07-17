@@ -14,6 +14,7 @@ https://cryptograveyard.io
 - `/hall-of-fame` — fictional demo leaderboard and award preview
 - `/bury-a-coin` — coming-soon preview of the future burial flow
 - `/memorial/sample` — fictional sample memorial page prototype
+- `/wallet-policy` — phased receiving-wallet policy and pre-launch safety plan
 - `/about` — mission, launch status, and wallet safety rules
 
 ## Getting Started

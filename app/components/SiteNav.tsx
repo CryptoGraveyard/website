@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { Skull, TvMinimalPlay } from "lucide-react";
 
-type NavKey = "home" | "hall" | "bury" | "memorial" | "about";
+type NavKey = "home" | "hall" | "bury" | "memorial" | "wallets" | "about";
 
 const navLinks: Array<{ href: string; key: NavKey; label: string }> = [
   { href: "/", key: "home", label: "Dashboard" },
   { href: "/hall-of-fame", key: "hall", label: "Hall of Fame" },
   { href: "/bury-a-coin", key: "bury", label: "Bury a Coin" },
   { href: "/memorial/sample", key: "memorial", label: "Sample Memorial" },
+  { href: "/wallet-policy", key: "wallets", label: "Wallet Plan" },
   { href: "/about", key: "about", label: "About & Safety" }
 ];
 
