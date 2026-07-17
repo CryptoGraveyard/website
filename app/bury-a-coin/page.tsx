@@ -3,11 +3,11 @@ import Link from "next/link";
 import {
   BadgeCheck,
   BellRing,
+  ClipboardList,
   Coins,
   Flame,
   Ghost,
   LockKeyhole,
-  Radio,
   Skull,
   Sparkles,
   Trophy
@@ -106,21 +106,19 @@ export default function BuryCoinPage() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/wallet-policy"
+              href="/beta-request"
               className="inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow transition hover:bg-bone-100"
+            >
+              <ClipboardList size={18} aria-hidden="true" />
+              Beta request preview
+            </Link>
+            <Link
+              className="inline-flex items-center justify-center gap-2 border border-bone-200/25 bg-grave-800 px-5 py-3 font-mono text-sm font-semibold uppercase text-bone-100 transition hover:border-acid-400 hover:text-acid-400"
+              href="/wallet-policy"
             >
               <LockKeyhole size={18} aria-hidden="true" />
               Wallet plan
             </Link>
-            <a
-              className="inline-flex items-center justify-center gap-2 border border-bone-200/25 bg-grave-800 px-5 py-3 font-mono text-sm font-semibold uppercase text-bone-100 transition hover:border-acid-400 hover:text-acid-400"
-              href="https://www.youtube.com/@CryptoGraveyard"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Radio size={18} aria-hidden="true" />
-              Follow launch updates
-            </a>
           </div>
         </div>
 
@@ -255,11 +253,11 @@ export default function BuryCoinPage() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/wallet-policy"
+              href="/beta-request"
               className="inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow transition hover:bg-bone-100"
             >
-              <LockKeyhole size={18} aria-hidden="true" />
-              Wallet plan
+              <ClipboardList size={18} aria-hidden="true" />
+              Beta request preview
             </Link>
             <Link
               href="/hall-of-fame"

@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   BadgeCheck,
-  BellRing,
+  ClipboardList,
   Coins,
   FileWarning,
   Flame,
   Ghost,
   LockKeyhole,
   ShieldCheck,
-  Skull,
   Sparkles,
   Trophy
 } from "lucide-react";
@@ -118,11 +117,11 @@ export default function WalletPolicyPage() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/bury-a-coin"
+              href="/beta-request"
               className="inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow transition hover:bg-bone-100"
             >
-              <BellRing size={18} aria-hidden="true" />
-              Burial flow preview
+              <ClipboardList size={18} aria-hidden="true" />
+              Beta request preview
             </Link>
             <Link
               href="/about#safety"
@@ -277,22 +276,22 @@ export default function WalletPolicyPage() {
       <section className="relative z-10 mx-auto mb-10 max-w-7xl border border-acid-400/20 bg-acid-400/10 p-6 shadow-card">
         <div className="flex flex-col justify-between gap-5 md:flex-row md:items-center">
           <div>
-            <p className="font-mono text-xs uppercase text-acid-400">Recommended next build</p>
+            <p className="font-mono text-xs uppercase text-acid-400">Manual beta layer</p>
             <h2 className="mt-2 font-display text-3xl font-bold text-bone-100">
-              Build the manual beta request form before publishing any wallets.
+              The request-form preview is ready before any wallets are published.
             </h2>
             <p className="mt-3 max-w-3xl text-sm leading-6 text-bone-500">
-              That form can collect chain, token contract, wallet proof preference, pseudonym, and
-              consent choices while keeping real transfers closed until you approve the burial.
+              It previews chain, token contract, wallet proof preference, pseudonym, and consent
+              choices while keeping real transfers closed until an approved beta burial exists.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/memorial/sample"
+              href="/beta-request"
               className="inline-flex items-center justify-center gap-2 border border-bone-200/25 bg-grave-800 px-5 py-3 font-mono text-sm font-semibold uppercase text-bone-100 transition hover:border-acid-400 hover:text-acid-400"
             >
-              <Skull size={18} aria-hidden="true" />
-              Sample memorial
+              <ClipboardList size={18} aria-hidden="true" />
+              Beta request
             </Link>
             <Link
               href="/hall-of-fame"

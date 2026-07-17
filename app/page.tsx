@@ -2,6 +2,7 @@ import {
   BadgeCheck,
   BellRing,
   Coins,
+  ClipboardList,
   Flame,
   Ghost,
   Radio,
@@ -50,6 +51,7 @@ const statCards = [
 
 const roadmap = [
   "Receiving-wallet policy",
+  "Manual beta request",
   "Live wallet watcher",
   "AI eulogies",
   "SBT memorial profiles",
@@ -74,6 +76,12 @@ const exploreCards = [
     href: "/wallet-policy",
     eyebrow: "Pre-launch policy",
     copy: "See the recommended manual-review-first approach before any official receiving wallets are published."
+  },
+  {
+    title: "Beta Request",
+    href: "/beta-request",
+    eyebrow: "Intake preview",
+    copy: "Preview the future manual beta request flow for early burials, wallet proof choices, and display consent."
   },
   {
     title: "Sample Memorial",
@@ -209,7 +217,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="grid gap-4 lg:grid-cols-3 xl:grid-cols-6">
             {exploreCards.map((card, index) => (
               <Link
                 key={card.href}
@@ -230,6 +238,8 @@ export default function Home() {
                   ) : index === 2 ? (
                     <BadgeCheck className="text-bone-100" size={24} aria-hidden="true" />
                   ) : index === 3 ? (
+                    <ClipboardList className="text-violet-400" size={24} aria-hidden="true" />
+                  ) : index === 4 ? (
                     <Ghost className="text-blood-500" size={24} aria-hidden="true" />
                   ) : (
                     <BadgeCheck className="text-bone-100" size={24} aria-hidden="true" />
