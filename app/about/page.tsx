@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   BadgeCheck,
-  BellRing,
   FileWarning,
   Ghost,
   LockKeyhole,
@@ -90,18 +89,18 @@ export default function AboutPage() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/bury-a-coin"
+              href="/cemetery"
               className="inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow transition hover:bg-bone-100"
             >
-              <BellRing size={18} aria-hidden="true" />
-              Preview burial flow
+              <Ghost size={18} aria-hidden="true" />
+              Explore cemetery
             </Link>
             <Link
-              href="/wallet-policy"
+              href="/faq"
               className="inline-flex items-center justify-center gap-2 border border-bone-200/25 bg-grave-800 px-5 py-3 font-mono text-sm font-semibold uppercase text-bone-100 transition hover:border-acid-400 hover:text-acid-400"
             >
-              <LockKeyhole size={18} aria-hidden="true" />
-              Wallet plan
+              <ShieldCheck size={18} aria-hidden="true" />
+              Safety FAQ
             </Link>
           </div>
         </div>
@@ -183,23 +182,22 @@ export default function AboutPage() {
       <section className="relative z-10 mx-auto mb-10 max-w-7xl border border-acid-400/20 bg-acid-400/10 p-6 shadow-card">
         <div className="flex flex-col justify-between gap-5 md:flex-row md:items-center">
           <div>
-            <p className="font-mono text-xs uppercase text-acid-400">Next decision</p>
+            <p className="font-mono text-xs uppercase text-acid-400">Pre-launch status</p>
             <h2 className="mt-2 font-display text-3xl font-bold text-bone-100">
-              Before wallets go live, the receiving-wallet policy needs to be designed.
+              The public site is a teaser until the MVP is ready.
             </h2>
             <p className="mt-3 max-w-3xl text-sm leading-6 text-bone-500">
-              The next product question is whether Crypto Graveyard publishes a few permanent
-              chain-specific cemetery wallets, creates per-submission deposit addresses, or starts
-              with a manual review flow.
+              Visitors can explore the cemetery world, sample memorials, leaderboards, and safety
+              rules. Real submissions and receiving wallets stay closed until the product is ready.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/wallet-policy"
+              href="/faq"
               className="inline-flex items-center justify-center gap-2 border border-bone-200/25 bg-grave-800 px-5 py-3 font-mono text-sm font-semibold uppercase text-bone-100 transition hover:border-acid-400 hover:text-acid-400"
             >
-              <LockKeyhole size={18} aria-hidden="true" />
-              Wallet plan
+              <ShieldCheck size={18} aria-hidden="true" />
+              Read FAQ
             </Link>
             <a
               className="inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow transition hover:bg-bone-100"

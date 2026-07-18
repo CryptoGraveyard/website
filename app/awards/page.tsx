@@ -241,11 +241,11 @@ export default function AwardsPage() {
             </p>
           </div>
           <Link
-            href="/bury-a-coin"
+            href="/headstones"
             className="inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow transition hover:bg-bone-100"
           >
             <Sparkles size={18} aria-hidden="true" />
-            Future burial flow
+            View headstones
           </Link>
         </div>
       </section>

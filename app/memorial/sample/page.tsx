@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  BellRing,
   FileText,
   Flame,
   Ghost,
@@ -137,11 +136,11 @@ export default function SampleMemorialPage() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/bury-a-coin"
+              href="/cemetery"
               className="inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow transition hover:bg-bone-100"
             >
-              <BellRing size={18} aria-hidden="true" />
-              Start future burial
+              <Ghost size={18} aria-hidden="true" />
+              Explore cemetery
             </Link>
             <Link
               href="/hall-of-fame"
@@ -282,11 +281,11 @@ export default function SampleMemorialPage() {
             </p>
           </div>
           <Link
-            href="/bury-a-coin"
+            href="/awards"
             className="inline-flex items-center justify-center gap-2 border border-bone-200/25 bg-grave-800 px-5 py-3 font-mono text-sm font-semibold uppercase text-bone-100 transition hover:border-acid-400 hover:text-acid-400"
           >
-            <BellRing size={18} aria-hidden="true" />
-            Future burial flow
+            <Trophy size={18} aria-hidden="true" />
+            Award previews
           </Link>
         </div>
       </section>

@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   ArrowLeft,
   BadgeCheck,
-  BellRing,
   Crown,
   Flame,
   Medal,
@@ -343,11 +342,11 @@ export default function HallOfFamePage() {
               Back home
             </Link>
             <Link
-              href="/bury-a-coin"
+              href="/awards"
               className="inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow"
             >
-              <BellRing size={18} aria-hidden="true" />
-              Bury a coin soon
+              <Trophy size={18} aria-hidden="true" />
+              View awards
             </Link>
           </div>
         </div>

@@ -26,16 +26,10 @@ const navLinks: Array<{ href: string; key: NavKey; label: string }> = [
   { href: "/bagholders", key: "bagholders", label: "Bagholders" },
   { href: "/hall-of-fame", key: "hall", label: "Hall of Fame" },
   { href: "/awards", key: "awards", label: "Awards" },
-  { href: "/bury-a-coin", key: "bury", label: "Bury a Coin" },
   { href: "/memorial/sample", key: "memorial", label: "Sample Memorial" },
   { href: "/headstones", key: "headstones", label: "Headstones" },
   { href: "/certificates", key: "certificates", label: "Certificates" },
   { href: "/livestream", key: "livestream", label: "Livestream" },
-  { href: "/methodology", key: "methodology", label: "Methodology" },
-  { href: "/launch-checklist", key: "launch", label: "Launch Checklist" },
-  { href: "/roadmap", key: "roadmap", label: "Roadmap" },
-  { href: "/wallet-policy", key: "wallets", label: "Wallet Plan" },
-  { href: "/beta-request", key: "beta", label: "Beta Request" },
   { href: "/faq", key: "faq", label: "FAQ" },
   { href: "/about", key: "about", label: "About & Safety" }
 ];

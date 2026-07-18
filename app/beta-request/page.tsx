@@ -19,7 +19,11 @@ import { TerminalStatusPanel } from "../components/TerminalStatusPanel";
 export const metadata: Metadata = {
   title: "Beta Request | Crypto Graveyard",
   description:
-    "A preview of the manual beta request flow for future Crypto Graveyard burials."
+    "A preview of the manual beta request flow for future Crypto Graveyard burials.",
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 const intakeFields = [

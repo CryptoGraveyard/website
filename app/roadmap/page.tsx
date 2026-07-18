@@ -20,7 +20,11 @@ import { roadmapPhases, roadmapStatusCopy, type RoadmapStatus } from "../content
 export const metadata: Metadata = {
   title: "Roadmap | Crypto Graveyard",
   description:
-    "The staged Crypto Graveyard roadmap from public prototype to controlled beta, wallet watchers, memorial automation, media, and collectibles."
+    "The staged Crypto Graveyard roadmap from public prototype to controlled beta, wallet watchers, memorial automation, media, and collectibles.",
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 const statusStyles: Record<RoadmapStatus, string> = {

@@ -23,7 +23,11 @@ import {
 export const metadata: Metadata = {
   title: "Metrics & Methodology | Crypto Graveyard",
   description:
-    "How Crypto Graveyard separates peak observed value, burial value, round trip, documentation status, and tax treatment."
+    "How Crypto Graveyard separates peak observed value, burial value, round trip, documentation status, and tax treatment.",
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 const headlineStats = [

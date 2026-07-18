@@ -23,7 +23,11 @@ import { TerminalStatusPanel } from "../components/TerminalStatusPanel";
 export const metadata: Metadata = {
   title: "Review Process | Crypto Graveyard",
   description:
-    "A public blueprint for Crypto Graveyard's future manual beta review queue, request statuses, and safety checks."
+    "A public blueprint for Crypto Graveyard's future manual beta review queue, request statuses, and safety checks.",
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 const statusFlow = [

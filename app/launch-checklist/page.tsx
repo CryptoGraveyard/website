@@ -25,7 +25,11 @@ import {
 export const metadata: Metadata = {
   title: "Launch Checklist | Crypto Graveyard",
   description:
-    "A launch-readiness checklist for Crypto Graveyard's public prototype, controlled beta, wallet operations, memorial records, awards, and collectibles."
+    "A launch-readiness checklist for Crypto Graveyard's public prototype, controlled beta, wallet operations, memorial records, awards, and collectibles.",
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 const itemStyles: Record<string, string> = {

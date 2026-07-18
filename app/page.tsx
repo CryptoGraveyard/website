@@ -1,8 +1,6 @@
 import {
   BadgeCheck,
-  BellRing,
   Coins,
-  ClipboardList,
   Flame,
   Ghost,
   Radio,
@@ -14,7 +12,6 @@ import Link from "next/link";
 import { DisclaimerFooter } from "./components/DisclaimerFooter";
 import { SectionIntro } from "./components/SectionIntro";
 import { SiteNav } from "./components/SiteNav";
-import { roadmapPhases, roadmapStatusCopy } from "./content/roadmap";
 
 const sampleBurials = [
   {
@@ -53,7 +50,7 @@ const statCards = [
   { label: "Sample burials", value: "3", note: "Demo data only" },
   { label: "Peak value buried", value: "$720K", note: "Sample notional" },
   { label: "Burial value", value: "$15.68", note: "Sample estimate" },
-  { label: "Headstones minted", value: "Soon", note: "Roadmap item" }
+  { label: "Real wallets", value: "Closed", note: "Pre-MVP teaser" }
 ];
 
 const exploreCards = [
@@ -86,27 +83,6 @@ const exploreCards = [
     icon: UsersRound
   },
   {
-    title: "Bury a Coin",
-    href: "/bury-a-coin",
-    eyebrow: "Coming soon flow",
-    copy: "Preview the future user journey for wallet proof, official receiving wallets, memorial pages, and certificates.",
-    icon: BellRing
-  },
-  {
-    title: "Wallet Plan",
-    href: "/wallet-policy",
-    eyebrow: "Pre-launch policy",
-    copy: "See the recommended manual-review-first approach before any official receiving wallets are published.",
-    icon: BadgeCheck
-  },
-  {
-    title: "Beta Request",
-    href: "/beta-request",
-    eyebrow: "Intake preview",
-    copy: "Preview the future manual beta request flow for early burials, wallet proof choices, and display consent.",
-    icon: ClipboardList
-  },
-  {
     title: "Sample Memorial",
     href: "/memorial/sample",
     eyebrow: "Shareable artifact",
@@ -131,29 +107,8 @@ const exploreCards = [
     title: "Livestream",
     href: "/livestream",
     eyebrow: "Media layer",
-    copy: "See how the future always-on YouTube/overlay experience can run with sample scenes and burial alerts.",
+    copy: "See how the future always-on YouTube experience can run with sample scenes and burial alerts.",
     icon: Radio
-  },
-  {
-    title: "Stream Overlay",
-    href: "/overlay",
-    eyebrow: "OBS preview",
-    copy: "Preview the sample browser-source composition for burial alerts, ticker text, leaderboard rows, and stream safety labels.",
-    icon: TvMinimalPlay
-  },
-  {
-    title: "Methodology",
-    href: "/methodology",
-    eyebrow: "Metric rules",
-    copy: "Separate peak observed value, burial value, round trip, documentation status, and tax treatment before real data arrives.",
-    icon: ClipboardList
-  },
-  {
-    title: "Launch Checklist",
-    href: "/launch-checklist",
-    eyebrow: "Readiness map",
-    copy: "See what can launch now, what must stay closed, and which gates unlock beta requests, wallets, plaques, and collectibles.",
-    icon: ClipboardList
   },
   {
     title: "FAQ",
@@ -213,7 +168,7 @@ export default function Home() {
           <div>
             <div className="mb-5 inline-flex items-center gap-2 border border-acid-400/25 bg-acid-400/10 px-3 py-2 font-mono text-xs uppercase text-acid-400">
               <Radio size={14} aria-hidden="true" />
-              Demo dashboard online
+              Pre-MVP teaser online
             </div>
             <h1 className="max-w-4xl font-display text-5xl font-black leading-[0.95] text-bone-100 sm:text-7xl lg:text-8xl">
               Crypto Graveyard
@@ -223,8 +178,8 @@ export default function Home() {
             </p>
             <p className="mt-5 max-w-2xl text-base leading-7 text-bone-200/80 sm:text-lg">
               A darkly funny memorial dashboard for abandoned bags, cursed tickers, pixel
-              headstones, and the future hall of legendary losses. No wallets yet. No tax promises.
-              Just a tasteful place to bury the chart.
+              headstones, and the future hall of legendary losses. Real wallets are not open yet.
+              No tax promises. Just a tasteful place to bury the chart.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -239,10 +194,10 @@ export default function Home() {
               </a>
               <Link
                 className="inline-flex items-center justify-center gap-2 border border-bone-200/25 bg-grave-800 px-5 py-3 font-mono text-sm font-semibold uppercase text-bone-100 transition hover:border-acid-400 hover:text-acid-400"
-                href="/bury-a-coin"
+                href="/cemetery"
               >
-                <BellRing size={18} aria-hidden="true" />
-                Bury a coin soon
+                <Coins size={18} aria-hidden="true" />
+                Explore cemetery
               </Link>
             </div>
           </div>
@@ -263,10 +218,10 @@ export default function Home() {
             </div>
             <div className="mt-4 border border-bone-200/10 bg-black/25 p-4 font-mono text-xs leading-6 text-bone-200/80">
               <p>
-                <span className="text-acid-400">&gt;</span> watcher.status = pending_wallets
+                <span className="text-acid-400">&gt;</span> display.mode = sample_data_only
               </p>
               <p>
-                <span className="text-acid-400">&gt;</span> display.mode = sample_data_only
+                <span className="text-acid-400">&gt;</span> wallets.public = false
               </p>
               <p>
                 <span className="text-acid-400">&gt;</span> tax.loss.verified = false
@@ -280,8 +235,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionIntro
             eyebrow="Explore the cemetery"
-            title="A tiny product, not just a landing page"
-            copy="The first version now has a demo dashboard, leaderboard, burial flow preview, and memorial artifact so visitors can understand the whole loop."
+            title="A teaser that feels like a product"
+            copy="The public site now focuses on the world visitors should see: cemetery entries, leaderboards, profiles, awards, memorial artifacts, collectibles, media, FAQ, and safety."
           />
 
           <div className="grid gap-4 lg:grid-cols-3 xl:grid-cols-4">
@@ -289,25 +244,25 @@ export default function Home() {
               const Icon = card.icon;
 
               return (
-              <Link
-                key={card.href}
-                href={card.href}
-                className="group border border-bone-200/10 bg-grave-900/75 p-6 shadow-card transition hover:border-acid-400/50"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="font-mono text-xs uppercase text-acid-400">{card.eyebrow}</p>
-                    <h3 className="mt-2 font-display text-3xl font-bold text-bone-100">
-                      {card.title}
-                    </h3>
+                <Link
+                  key={card.href}
+                  href={card.href}
+                  className="group border border-bone-200/10 bg-grave-900/75 p-6 shadow-card transition hover:border-acid-400/50"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="font-mono text-xs uppercase text-acid-400">{card.eyebrow}</p>
+                      <h3 className="mt-2 font-display text-3xl font-bold text-bone-100">
+                        {card.title}
+                      </h3>
+                    </div>
+                    <Icon className="text-acid-400" size={24} aria-hidden="true" />
                   </div>
-                  <Icon className="text-acid-400" size={24} aria-hidden="true" />
-                </div>
-                <p className="mt-4 text-sm leading-6 text-bone-500">{card.copy}</p>
-                <p className="mt-5 font-mono text-xs uppercase text-acid-400 group-hover:text-bone-100">
-                  Open page →
-                </p>
-              </Link>
+                  <p className="mt-4 text-sm leading-6 text-bone-500">{card.copy}</p>
+                  <p className="mt-5 font-mono text-xs uppercase text-acid-400 group-hover:text-bone-100">
+                    Open page →
+                  </p>
+                </Link>
               );
             })}
           </div>
@@ -328,17 +283,24 @@ export default function Home() {
                 key={burial.symbol}
                 className="border border-bone-200/10 bg-grave-900/70 p-5 shadow-card"
               >
-                <PixelHeadstone color={burial.color as "acid" | "violet" | "blood"} label={burial.symbol} />
+                <PixelHeadstone
+                  color={burial.color as "acid" | "violet" | "blood"}
+                  label={burial.symbol}
+                />
                 <div className="mt-5 flex items-center justify-between gap-3">
                   <div>
-                    <h3 className="font-display text-2xl font-bold text-bone-100">{burial.coin}</h3>
+                    <h3 className="font-display text-2xl font-bold text-bone-100">
+                      {burial.coin}
+                    </h3>
                     <p className="font-mono text-xs uppercase text-bone-500">{burial.symbol}</p>
                   </div>
                   <span className="border border-blood-500/35 bg-blood-500/12 px-2 py-1 font-mono text-[11px] uppercase text-blood-500">
                     {burial.status}
                   </span>
                 </div>
-                <p className="mt-4 min-h-12 text-sm leading-6 text-bone-200/75">{burial.inscription}</p>
+                <p className="mt-4 min-h-12 text-sm leading-6 text-bone-200/75">
+                  {burial.inscription}
+                </p>
                 <div className="mt-5 grid grid-cols-2 gap-3 border-t border-bone-200/10 pt-4 font-mono text-xs">
                   <div>
                     <p className="uppercase text-bone-500">Peak observed</p>
@@ -353,67 +315,9 @@ export default function Home() {
                   href={burial.href}
                   className="mt-5 inline-flex font-mono text-xs uppercase text-acid-400 hover:text-bone-100"
                 >
-                  Open coin profile
-                </Link>
-                <Link
-                  href={burial.href}
-                  className="hidden"
-                  aria-hidden="true"
-                  tabIndex={-1}
-                >
                   Open coin profile →
                 </Link>
-                <Link
-                  href={burial.href}
-                  className="hidden"
-                  aria-hidden="true"
-                  tabIndex={-1}
-                >
-                  View sample memorial →
-                </Link>
               </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="roadmap" className="px-5 py-14 sm:px-8 lg:px-12">
-        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <p className="font-mono text-xs uppercase text-acid-400">Roadmap</p>
-            <h2 className="mt-2 font-display text-3xl font-bold text-bone-100 sm:text-5xl">
-              A staged path from concept to cemetery engine
-            </h2>
-            <p className="mt-4 max-w-xl text-sm leading-6 text-bone-500">
-              The project is deliberately moving from public presence to controlled beta, then
-              storage, wallet watchers, memorial automation, media, and collectibles.
-            </p>
-            <Link
-              href="/roadmap"
-              className="mt-5 inline-flex font-mono text-xs uppercase text-acid-400 hover:text-bone-100"
-            >
-              Open full roadmap →
-            </Link>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {roadmapPhases.slice(0, 6).map((item, index) => (
-              <Link key={item.title} href={item.href} className="terminal-border p-5 transition hover:border-acid-400/50">
-                <div className="mb-5 flex items-center justify-between">
-                  <span className="font-mono text-xs uppercase text-bone-500">
-                    {item.phase}
-                  </span>
-                  {index % 2 === 0 ? (
-                    <Coins className="text-acid-400" size={18} aria-hidden="true" />
-                  ) : (
-                    <Ghost className="text-violet-400" size={18} aria-hidden="true" />
-                  )}
-                </div>
-                <h3 className="font-display text-xl font-bold text-bone-100">{item.title}</h3>
-                <p className="mt-2 font-mono text-[11px] uppercase text-acid-400">{item.status}</p>
-                <p className="mt-3 text-sm leading-6 text-bone-500">
-                  {roadmapStatusCopy[item.status]}
-                </p>
-              </Link>
             ))}
           </div>
         </div>
@@ -427,7 +331,7 @@ export default function Home() {
               Hall of legendary losses
             </h3>
             <p className="mt-3 text-sm leading-6 text-bone-500">
-              Leaderboards will separate entertainment metrics from tax facts.
+              Leaderboards separate entertainment metrics from tax facts.
             </p>
             <Link
               href="/hall-of-fame"
@@ -444,15 +348,27 @@ export default function Home() {
             <p className="mt-3 text-sm leading-6 text-bone-500">
               Stream-ready scenes and eulogies come later, once burials are real.
             </p>
+            <Link
+              href="/livestream"
+              className="mt-5 inline-flex font-mono text-xs uppercase text-acid-400 hover:text-bone-100"
+            >
+              View livestream concept →
+            </Link>
           </div>
           <div className="border border-bone-200/10 bg-bone-100/10 p-6">
             <BadgeCheck className="text-bone-100" size={24} aria-hidden="true" />
             <h3 className="mt-4 font-display text-2xl font-bold text-bone-100">
-              Confidence labels
+              Safety-first teaser
             </h3>
             <p className="mt-3 text-sm leading-6 text-bone-500">
-              Values will be labeled as sample, observed, estimated, documented, or unknown.
+              No live receiving wallets, no tax promises, and no request for wallet secrets.
             </p>
+            <Link
+              href="/faq"
+              className="mt-5 inline-flex font-mono text-xs uppercase text-acid-400 hover:text-bone-100"
+            >
+              Read FAQ →
+            </Link>
           </div>
         </div>
       </section>

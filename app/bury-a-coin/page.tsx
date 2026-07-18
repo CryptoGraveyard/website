@@ -20,7 +20,11 @@ import { TerminalStatusPanel } from "../components/TerminalStatusPanel";
 export const metadata: Metadata = {
   title: "Bury a Coin | Crypto Graveyard",
   description:
-    "A coming-soon preview of the Crypto Graveyard burial flow: wallet proof, burial details, memorial pages, and future awards."
+    "A coming-soon preview of the Crypto Graveyard burial flow: wallet proof, burial details, memorial pages, and future awards.",
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 const steps = [

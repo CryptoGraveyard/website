@@ -19,7 +19,11 @@ import { TerminalStatusPanel } from "../components/TerminalStatusPanel";
 export const metadata: Metadata = {
   title: "Wallet Plan | Crypto Graveyard",
   description:
-    "Crypto Graveyard's pre-launch receiving-wallet policy, safety model, and phased path to real token burials."
+    "Crypto Graveyard's pre-launch receiving-wallet policy, safety model, and phased path to real token burials.",
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 const walletModels = [

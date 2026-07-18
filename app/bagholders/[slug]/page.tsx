@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import {
   ArrowLeft,
   BadgeCheck,
-  BellRing,
   Crown,
   FileText,
   ShieldCheck,
@@ -223,11 +222,11 @@ export default async function BagholderProfilePage({ params }: BagholderPageProp
             </p>
           </div>
           <Link
-            href="/bury-a-coin"
+            href="/awards"
             className="inline-flex items-center justify-center gap-2 border border-acid-400 bg-acid-400 px-5 py-3 font-mono text-sm font-semibold uppercase text-grave-950 shadow-glow transition hover:bg-bone-100"
           >
-            <BellRing size={18} aria-hidden="true" />
-            Future burial flow
+            <Trophy size={18} aria-hidden="true" />
+            Award previews
           </Link>
         </div>
       </section>

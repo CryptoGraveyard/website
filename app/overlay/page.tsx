@@ -25,7 +25,11 @@ import {
 export const metadata: Metadata = {
   title: "Stream Overlay Preview | Crypto Graveyard",
   description:
-    "A sample-data OBS-style overlay preview for Crypto Graveyard's future automated livestream scenes, ticker, leaderboard, and burial alerts."
+    "A sample-data OBS-style overlay preview for Crypto Graveyard's future automated livestream scenes, ticker, leaderboard, and burial alerts.",
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 function OverlayFrame() {
