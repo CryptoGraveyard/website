@@ -5,6 +5,7 @@ type NavKey =
   | "home"
   | "cemetery"
   | "bagholders"
+  | "awards"
   | "roadmap"
   | "hall"
   | "bury"
@@ -22,6 +23,7 @@ const navLinks: Array<{ href: string; key: NavKey; label: string }> = [
   { href: "/cemetery", key: "cemetery", label: "Cemetery" },
   { href: "/bagholders", key: "bagholders", label: "Bagholders" },
   { href: "/hall-of-fame", key: "hall", label: "Hall of Fame" },
+  { href: "/awards", key: "awards", label: "Awards" },
   { href: "/bury-a-coin", key: "bury", label: "Bury a Coin" },
   { href: "/memorial/sample", key: "memorial", label: "Sample Memorial" },
   { href: "/headstones", key: "headstones", label: "Headstones" },

@@ -371,6 +371,262 @@ export const bagholderProfileNotes = [
   }
 ] as const;
 
+export const awardPrograms = [
+  {
+    slug: "funeral-of-the-month",
+    title: "Funeral of the Month",
+    cadence: "Monthly",
+    status: "Sample winner",
+    winner: "MoonBagMike",
+    winnerHref: "/bagholders/moonbagmike",
+    coin: "MoonRocket Inu",
+    coinHref: "/coins/moonrocket-inu",
+    headline: "The monthly spotlight for the burial with the best mix of scale, story, and cemetery theater.",
+    awardValue: "$412,880.83",
+    prize: "Physical plaque concept + Legendary headstone eligibility",
+    plaqueTitle: "Funeral of the Month",
+    plaqueSubtitle: "July 2026 sample class",
+    plaqueLine: "Never sold. Barely slept.",
+    plaqueFooter: "May the chart finally rest.",
+    accent: "acid",
+    criteria: [
+      "Strong public story",
+      "Clear sample confidence labels",
+      "Memorable eulogy potential",
+      "High entertainment value without tax claims"
+    ],
+    fulfillment: [
+      "Select finalist from reviewed burial records",
+      "Confirm display consent and pseudonym",
+      "Publish award page and memorial link",
+      "Offer plaque fulfillment only after winner confirms shipping details privately"
+    ],
+    publicFields: [
+      ["Cadence", "Monthly"],
+      ["Sample winner", "MoonBagMike"],
+      ["Featured coin", "MoonRocket Inu"],
+      ["Award metric", "Biggest round trip"],
+      ["Prize layer", "Plaque + headstone eligibility"],
+      ["Tax status", "Not determined"]
+    ]
+  },
+  {
+    slug: "king-of-the-graveyard",
+    title: "King of the Graveyard",
+    cadence: "Annual",
+    status: "Reserved",
+    winner: "Pending",
+    winnerHref: "/hall-of-fame",
+    coin: "To be decided",
+    coinHref: "/cemetery",
+    headline: "The crown for the most spectacular verified story of the year, once real burials exist.",
+    awardValue: "Annual crown",
+    prize: "One-of-one plaque concept + Mythic headstone eligibility",
+    plaqueTitle: "King of the Graveyard",
+    plaqueSubtitle: "Annual crown",
+    plaqueLine: "A chart so dead it needed ceremony.",
+    plaqueFooter: "Crowned by the cemetery.",
+    accent: "violet",
+    criteria: [
+      "Year-defining burial story",
+      "Strong evidence package",
+      "Community reaction",
+      "No unresolved safety or consent concerns"
+    ],
+    fulfillment: [
+      "Close nominations after the final monthly award",
+      "Review finalists against evidence and story criteria",
+      "Publish annual award page",
+      "Ship one physical plaque if the winner opts in"
+    ],
+    publicFields: [
+      ["Cadence", "Annual"],
+      ["Sample winner", "Pending"],
+      ["Featured coin", "To be decided"],
+      ["Award metric", "Best overall burial"],
+      ["Prize layer", "One-of-one plaque + Mythic headstone"],
+      ["Tax status", "Not determined"]
+    ]
+  },
+  {
+    slug: "most-diamond-hands",
+    title: "Most Diamond Hands",
+    cadence: "Monthly",
+    status: "Sample winner",
+    winner: "VaultWizard",
+    winnerHref: "/bagholders/vaultwizard",
+    coin: "Yield Phantom",
+    coinHref: "/coins/yield-phantom",
+    headline: "For the participant who held through every obvious exit sign and somehow kept clicking refresh.",
+    awardValue: "Still held",
+    prize: "Digital badge + Rare headstone eligibility",
+    plaqueTitle: "Most Diamond Hands",
+    plaqueSubtitle: "Sample endurance award",
+    plaqueLine: "The vault stayed closed. Unfortunately.",
+    plaqueFooter: "Hands: diamond. Outcome: educational.",
+    accent: "blood",
+    criteria: [
+      "Long observed holding period",
+      "Late burial relative to project decline",
+      "Good chain-of-custody continuity",
+      "Strong comedy-to-tragedy ratio"
+    ],
+    fulfillment: [
+      "Calculate observed holding period",
+      "Compare against other eligible burials",
+      "Publish badge on bagholder profile",
+      "Offer optional collectible headstone when minting exists"
+    ],
+    publicFields: [
+      ["Cadence", "Monthly"],
+      ["Sample winner", "VaultWizard"],
+      ["Featured coin", "Yield Phantom"],
+      ["Award metric", "Observed hold duration"],
+      ["Prize layer", "Badge + Rare headstone eligibility"],
+      ["Tax status", "Not determined"]
+    ]
+  },
+  {
+    slug: "state-funeral",
+    title: "State Funeral",
+    cadence: "Special event",
+    status: "Demo concept",
+    winner: "DragonCandle",
+    winnerHref: "/coins/dragoncandle",
+    coin: "DragonCandle",
+    coinHref: "/coins/dragoncandle",
+    headline: "A special ceremony for especially dramatic token collapses, exploits, drains, and cultural disasters.",
+    awardValue: "$612,440.01",
+    prize: "Featured livestream segment + Epic headstone eligibility",
+    plaqueTitle: "State Funeral",
+    plaqueSubtitle: "Special event ceremony",
+    plaqueLine: "The candle was technically a flare.",
+    plaqueFooter: "Flags at half-mast. Liquidity at none.",
+    accent: "blood",
+    criteria: [
+      "High-profile cause of death",
+      "A strong public explanation",
+      "Stream-worthy visual narrative",
+      "Clear separation between notional value and realizable value"
+    ],
+    fulfillment: [
+      "Flag candidate during review or community nomination",
+      "Prepare a featured obituary segment",
+      "Attach confidence labels to the event page",
+      "Archive the ceremony on the livestream page"
+    ],
+    publicFields: [
+      ["Cadence", "Special event"],
+      ["Sample feature", "DragonCandle"],
+      ["Featured coin", "DragonCandle"],
+      ["Award metric", "Story impact"],
+      ["Prize layer", "Livestream feature + Epic headstone"],
+      ["Tax status", "Not determined"]
+    ]
+  },
+  {
+    slug: "poet-of-pain",
+    title: "Poet of Pain",
+    cadence: "Monthly",
+    status: "Sample winner",
+    winner: "ExitLiquidity",
+    winnerHref: "/bagholders/exitliquidity",
+    coin: "Diamond Pawz",
+    coinHref: "/coins/diamond-pawz",
+    headline: "For the best epitaph, obituary line, or tragic one-liner submitted with a burial.",
+    awardValue: "Best epitaph",
+    prize: "Profile badge + plaque quote shortlist",
+    plaqueTitle: "Poet of Pain",
+    plaqueSubtitle: "Best epitaph award",
+    plaqueLine: "Someone had to buy the top.",
+    plaqueFooter: "The cemetery appreciates your service.",
+    accent: "violet",
+    criteria: [
+      "Originality",
+      "Shareability",
+      "Fits the graveyard tone",
+      "Does not harass real people or encourage harmful behavior"
+    ],
+    fulfillment: [
+      "Collect opt-in epitaph submissions",
+      "Moderate for safety and platform rules",
+      "Feature the winning line on the award page",
+      "Add the quote to the public bagholder profile"
+    ],
+    publicFields: [
+      ["Cadence", "Monthly"],
+      ["Sample winner", "ExitLiquidity"],
+      ["Featured coin", "Diamond Pawz"],
+      ["Award metric", "Best epitaph"],
+      ["Prize layer", "Badge + quote feature"],
+      ["Tax status", "Not determined"]
+    ]
+  },
+  {
+    slug: "rug-survivor",
+    title: "Rug Survivor",
+    cadence: "Monthly",
+    status: "Demo concept",
+    winner: "RugHistorian",
+    winnerHref: "/bagholders/rughistorian",
+    coin: "SafeMars Classic",
+    coinHref: "/coins/safemars-classic",
+    headline: "For the participant with the best receipts from the long, weird afterlife of an abandoned project.",
+    awardValue: "Receipts archived",
+    prize: "Archive badge + Rare headstone eligibility",
+    plaqueTitle: "Rug Survivor",
+    plaqueSubtitle: "Receipts archivist award",
+    plaqueLine: "Every rug deserves footnotes.",
+    plaqueFooter: "History is written by the bagholders.",
+    accent: "bone",
+    criteria: [
+      "Useful public documentation",
+      "Clear timeline of abandonment",
+      "No doxxing or unsafe claims",
+      "Helps explain the project history"
+    ],
+    fulfillment: [
+      "Review submitted public links and screenshots",
+      "Separate documented facts from commentary",
+      "Credit the participant pseudonymously",
+      "Attach archive notes to the coin profile"
+    ],
+    publicFields: [
+      ["Cadence", "Monthly"],
+      ["Sample winner", "RugHistorian"],
+      ["Featured coin", "SafeMars Classic"],
+      ["Award metric", "Best historical record"],
+      ["Prize layer", "Archive badge + Rare headstone"],
+      ["Tax status", "Not determined"]
+    ]
+  }
+] as const;
+
+export type AwardProgram = (typeof awardPrograms)[number];
+
+export function getAwardBySlug(slug: string) {
+  return awardPrograms.find((award) => award.slug === slug);
+}
+
+export const awardGuardrails = [
+  {
+    label: "No tax conclusion",
+    copy: "Awards celebrate site activity and stories. They do not verify deductible losses, cost basis, charitable deductions, or legal ownership."
+  },
+  {
+    label: "Consent before display",
+    copy: "Real winners should approve pseudonym, masked wallet display, public links, and plaque fulfillment details before anything is published."
+  },
+  {
+    label: "No value promise",
+    copy: "Plaques, badges, SBTs, and headstones should be framed as recognition or art, not investments expected to appreciate."
+  },
+  {
+    label: "Evidence-aware",
+    copy: "Future award pages should label whether metrics are sample, on-chain observed, estimated, documented, reviewed, or unknown."
+  }
+] as const;
+
 export const headstoneSamples = [
   {
     id: "CG-HS-0001",

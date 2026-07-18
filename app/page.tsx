@@ -72,6 +72,13 @@ const exploreCards = [
     icon: Trophy
   },
   {
+    title: "Awards",
+    href: "/awards",
+    eyebrow: "Plaque layer",
+    copy: "Preview monthly trophies, annual crowns, physical plaque language, and future headstone eligibility rules.",
+    icon: Trophy
+  },
+  {
     title: "Bagholders",
     href: "/bagholders",
     eyebrow: "Profile layer",

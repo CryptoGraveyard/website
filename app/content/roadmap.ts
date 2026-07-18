@@ -13,6 +13,7 @@ export const roadmapPhases = [
       "Sample cemetery catalog",
       "Bagholder directory and profiles",
       "Hall of Fame demo",
+      "Awards and plaque preview",
       "Sample memorial page",
       "FAQ and visitor guidance",
       "About and safety page"
@@ -106,7 +107,7 @@ export const roadmapPhases = [
     status: "Later",
     summary:
       "Add non-transferable memorial profiles and optional tradable randomized headstone NFTs once the core burial loop works.",
-    shipped: ["Headstone collectibles preview"],
+    shipped: ["Headstone collectibles preview", "Award-to-headstone eligibility preview"],
     next: [
       "SBT profile design",
       "Headstone trait model",

@@ -101,6 +101,7 @@ const awardCards = [
     winner: "MoonBagMike",
     value: "$412,880.83",
     note: "Largest fictional round trip in the demo cemetery.",
+    href: "/awards/funeral-of-the-month",
     icon: Trophy,
     accent: "text-acid-400"
   },
@@ -109,6 +110,7 @@ const awardCards = [
     winner: "Pending",
     value: "Annual award",
     note: "Reserved for the most spectacular documented burial once real submissions exist.",
+    href: "/awards/king-of-the-graveyard",
     icon: Crown,
     accent: "text-violet-400"
   },
@@ -117,6 +119,7 @@ const awardCards = [
     winner: "VaultWizard",
     value: "Still held",
     note: "For bags carried bravely past several obvious warning signs.",
+    href: "/awards/most-diamond-hands",
     icon: Medal,
     accent: "text-blood-500"
   }
@@ -218,7 +221,11 @@ export default function HallOfFamePage() {
         {awardCards.map((award) => {
           const Icon = award.icon;
           return (
-            <article key={award.title} className="border border-bone-200/10 bg-grave-900/75 p-6 shadow-card">
+            <Link
+              key={award.title}
+              href={award.href}
+              className="group border border-bone-200/10 bg-grave-900/75 p-6 shadow-card transition hover:border-acid-400/50"
+            >
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-mono text-xs uppercase text-bone-500">{award.title}</p>
@@ -228,7 +235,10 @@ export default function HallOfFamePage() {
               </div>
               <p className={`mt-5 font-display text-2xl font-bold ${award.accent}`}>{award.value}</p>
               <p className="mt-3 text-sm leading-6 text-bone-500">{award.note}</p>
-            </article>
+              <p className="mt-5 font-mono text-xs uppercase text-acid-400 group-hover:text-bone-100">
+                Open award profile →
+              </p>
+            </Link>
           );
         })}
       </section>
