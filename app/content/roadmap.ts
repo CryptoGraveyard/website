@@ -10,8 +10,10 @@ export const roadmapPhases = [
     shipped: [
       "Production domain connected",
       "Homepage dashboard with sample data",
+      "Sample cemetery catalog",
       "Hall of Fame demo",
       "Sample memorial page",
+      "FAQ and visitor guidance",
       "About and safety page"
     ],
     next: ["Social preview artwork", "Logo polish", "Public launch checklist"],
@@ -71,7 +73,7 @@ export const roadmapPhases = [
     status: "Planned",
     summary:
       "Generate real memorial pages, eulogies, confidence labels, timelines, and certificates from reviewed burial records.",
-    shipped: ["Sample memorial prototype"],
+    shipped: ["Sample memorial prototype", "Certificate preview page"],
     next: [
       "Memorial database schema",
       "AI eulogy workflow",
@@ -95,7 +97,7 @@ export const roadmapPhases = [
       "YouTube embed/automation",
       "Clip/highlight workflow"
     ],
-    href: "/hall-of-fame"
+    href: "/livestream"
   },
   {
     phase: "Phase 7",
@@ -103,7 +105,7 @@ export const roadmapPhases = [
     status: "Later",
     summary:
       "Add non-transferable memorial profiles and optional tradable randomized headstone NFTs once the core burial loop works.",
-    shipped: [],
+    shipped: ["Headstone collectibles preview"],
     next: [
       "SBT profile design",
       "Headstone trait model",
@@ -111,7 +113,7 @@ export const roadmapPhases = [
       "Minting chain selection",
       "Rarity and provenance rules"
     ],
-    href: "/wallet-policy"
+    href: "/headstones"
   }
 ] as const;
 

@@ -54,40 +54,81 @@ const statCards = [
 
 const exploreCards = [
   {
+    title: "Coin Cemetery",
+    href: "/cemetery",
+    eyebrow: "Sample catalog",
+    copy: "Browse a fictional catalog of dead coins, causes of death, confidence labels, and future searchable archive behavior.",
+    icon: Coins
+  },
+  {
     title: "Hall of Fame",
     href: "/hall-of-fame",
     eyebrow: "Demo leaderboard",
-    copy: "Browse fictional awards, biggest round trips, and the leaderboard language that keeps entertainment metrics separate from tax facts."
+    copy: "Browse fictional awards, biggest round trips, and the leaderboard language that keeps entertainment metrics separate from tax facts.",
+    icon: Trophy
   },
   {
     title: "Bury a Coin",
     href: "/bury-a-coin",
     eyebrow: "Coming soon flow",
-    copy: "Preview the future user journey for wallet proof, official receiving wallets, memorial pages, and certificates."
+    copy: "Preview the future user journey for wallet proof, official receiving wallets, memorial pages, and certificates.",
+    icon: BellRing
   },
   {
     title: "Wallet Plan",
     href: "/wallet-policy",
     eyebrow: "Pre-launch policy",
-    copy: "See the recommended manual-review-first approach before any official receiving wallets are published."
+    copy: "See the recommended manual-review-first approach before any official receiving wallets are published.",
+    icon: BadgeCheck
   },
   {
     title: "Beta Request",
     href: "/beta-request",
     eyebrow: "Intake preview",
-    copy: "Preview the future manual beta request flow for early burials, wallet proof choices, and display consent."
+    copy: "Preview the future manual beta request flow for early burials, wallet proof choices, and display consent.",
+    icon: ClipboardList
   },
   {
     title: "Sample Memorial",
     href: "/memorial/sample",
     eyebrow: "Shareable artifact",
-    copy: "See what a burial can become: a public record, eulogy, confidence labels, timeline, and certificate preview."
+    copy: "See what a burial can become: a public record, eulogy, confidence labels, timeline, and certificate preview.",
+    icon: Ghost
+  },
+  {
+    title: "Headstones",
+    href: "/headstones",
+    eyebrow: "Collectibles preview",
+    copy: "Explore randomized pixel headstone traits, rarity tiers, provenance, and the SBT-versus-NFT split.",
+    icon: Flame
+  },
+  {
+    title: "Certificates",
+    href: "/certificates",
+    eyebrow: "Share layer",
+    copy: "Preview printable burial certificates, QR-linked memorials, and future on-chain certificate options.",
+    icon: BadgeCheck
+  },
+  {
+    title: "Livestream",
+    href: "/livestream",
+    eyebrow: "Media layer",
+    copy: "See how the future always-on YouTube/overlay experience can run with sample scenes and burial alerts.",
+    icon: Radio
+  },
+  {
+    title: "FAQ",
+    href: "/faq",
+    eyebrow: "Visitor guidance",
+    copy: "Answer the obvious safety, wallet, tax-positioning, and pre-launch questions before strangers ask them.",
+    icon: BadgeCheck
   },
   {
     title: "About & Safety",
     href: "/about",
     eyebrow: "Trust layer",
-    copy: "Read the mission, launch status, wallet safety rules, and the bright-line disclaimers before any real burial flow exists."
+    copy: "Read the mission, launch status, wallet safety rules, and the bright-line disclaimers before any real burial flow exists.",
+    icon: BadgeCheck
   }
 ];
 
@@ -204,8 +245,11 @@ export default function Home() {
             copy="The first version now has a demo dashboard, leaderboard, burial flow preview, and memorial artifact so visitors can understand the whole loop."
           />
 
-          <div className="grid gap-4 lg:grid-cols-3 xl:grid-cols-6">
-            {exploreCards.map((card, index) => (
+          <div className="grid gap-4 lg:grid-cols-3 xl:grid-cols-4">
+            {exploreCards.map((card) => {
+              const Icon = card.icon;
+
+              return (
               <Link
                 key={card.href}
                 href={card.href}
@@ -218,26 +262,15 @@ export default function Home() {
                       {card.title}
                     </h3>
                   </div>
-                  {index === 0 ? (
-                    <Trophy className="text-acid-400" size={24} aria-hidden="true" />
-                  ) : index === 1 ? (
-                    <BellRing className="text-violet-400" size={24} aria-hidden="true" />
-                  ) : index === 2 ? (
-                    <BadgeCheck className="text-bone-100" size={24} aria-hidden="true" />
-                  ) : index === 3 ? (
-                    <ClipboardList className="text-violet-400" size={24} aria-hidden="true" />
-                  ) : index === 4 ? (
-                    <Ghost className="text-blood-500" size={24} aria-hidden="true" />
-                  ) : (
-                    <BadgeCheck className="text-bone-100" size={24} aria-hidden="true" />
-                  )}
+                  <Icon className="text-acid-400" size={24} aria-hidden="true" />
                 </div>
                 <p className="mt-4 text-sm leading-6 text-bone-500">{card.copy}</p>
                 <p className="mt-5 font-mono text-xs uppercase text-acid-400 group-hover:text-bone-100">
                   Open page →
                 </p>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

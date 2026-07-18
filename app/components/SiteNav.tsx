@@ -1,16 +1,34 @@
 import Link from "next/link";
 import { Skull, TvMinimalPlay } from "lucide-react";
 
-type NavKey = "home" | "roadmap" | "hall" | "bury" | "memorial" | "wallets" | "beta" | "about";
+type NavKey =
+  | "home"
+  | "cemetery"
+  | "roadmap"
+  | "hall"
+  | "bury"
+  | "memorial"
+  | "headstones"
+  | "certificates"
+  | "livestream"
+  | "wallets"
+  | "beta"
+  | "faq"
+  | "about";
 
 const navLinks: Array<{ href: string; key: NavKey; label: string }> = [
   { href: "/", key: "home", label: "Dashboard" },
-  { href: "/roadmap", key: "roadmap", label: "Roadmap" },
+  { href: "/cemetery", key: "cemetery", label: "Cemetery" },
   { href: "/hall-of-fame", key: "hall", label: "Hall of Fame" },
   { href: "/bury-a-coin", key: "bury", label: "Bury a Coin" },
   { href: "/memorial/sample", key: "memorial", label: "Sample Memorial" },
+  { href: "/headstones", key: "headstones", label: "Headstones" },
+  { href: "/certificates", key: "certificates", label: "Certificates" },
+  { href: "/livestream", key: "livestream", label: "Livestream" },
+  { href: "/roadmap", key: "roadmap", label: "Roadmap" },
   { href: "/wallet-policy", key: "wallets", label: "Wallet Plan" },
   { href: "/beta-request", key: "beta", label: "Beta Request" },
+  { href: "/faq", key: "faq", label: "FAQ" },
   { href: "/about", key: "about", label: "About & Safety" }
 ];
 
