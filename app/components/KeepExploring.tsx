@@ -160,7 +160,7 @@ export function KeepExploring({
             <Link
               key={route.href}
               href={route.href}
-              className="group border border-bone-200/10 bg-grave-900/75 p-5 shadow-card transition hover:border-acid-400/50"
+              className="gothic-card group p-5 transition"
             >
               <div className="flex items-start justify-between gap-4">
                 <div>

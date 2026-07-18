@@ -76,7 +76,7 @@ export function PrototypeFlow({ className = "" }: { className?: string }) {
               <Link
                 key={step.title}
                 href={step.href}
-                className="group border border-bone-200/10 bg-grave-900/75 p-6 shadow-card transition hover:border-acid-400/50"
+                className="gothic-card group p-6 transition"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>

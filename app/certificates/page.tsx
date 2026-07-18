@@ -218,7 +218,7 @@ export default function CertificatesPage() {
 
         <div className="grid gap-4 sm:grid-cols-2">
           {certificateSharePack.map((item) => (
-            <article key={item.title} className="terminal-border p-5">
+            <article key={item.title} className="gothic-card p-5">
               <BadgeCheck className="text-acid-400" size={20} aria-hidden="true" />
               <p className="mt-4 font-mono text-xs uppercase text-acid-400">{item.status}</p>
               <h3 className="mt-2 font-display text-2xl font-bold text-bone-100">

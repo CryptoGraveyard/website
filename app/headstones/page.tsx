@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BadgeCheck, Boxes, Gem, Hash, ShieldCheck, Sparkles, Trophy } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { KeepExploring } from "../components/KeepExploring";
+import { PixelHeadstone } from "../components/PixelHeadstone";
 import { SectionIntro } from "../components/SectionIntro";
 import { SiteNav } from "../components/SiteNav";
 import { headstoneSamples, rarityTiers, traitGroups } from "../content/sampleData";
@@ -13,13 +14,6 @@ export const metadata: Metadata = {
     "A sample-data preview of Crypto Graveyard's future randomized pixel headstone collectibles, rarity tiers, and provenance model."
 };
 
-const accentClasses: Record<string, string> = {
-  acid: "bg-acid-400 shadow-[0_0_28px_rgba(166,255,61,0.28)]",
-  violet: "bg-violet-400 shadow-[0_0_28px_rgba(181,117,255,0.28)]",
-  blood: "bg-blood-500 shadow-[0_0_28px_rgba(220,50,69,0.28)]",
-  bone: "bg-bone-100 shadow-[0_0_28px_rgba(244,240,220,0.22)]"
-};
-
 const rarityStyles: Record<string, string> = {
   Common: "border-bone-200/20 bg-bone-100/10 text-bone-100",
   Rare: "border-acid-400/30 bg-acid-400/10 text-acid-400",
@@ -27,52 +21,6 @@ const rarityStyles: Record<string, string> = {
   Legendary: "border-violet-400/35 bg-violet-400/10 text-violet-400",
   Mythic: "border-acid-400 bg-acid-400 text-grave-950 shadow-glow"
 };
-
-function PixelHeadstone({
-  accent,
-  label,
-  shape = "Tablet"
-}: {
-  accent: string;
-  label: string;
-  shape?: string;
-}) {
-  const accentClass = accentClasses[accent] ?? accentClasses.acid;
-  const shapeName = shape.toLowerCase();
-  const bodyShape = shapeName.includes("crypt")
-    ? "left-4 top-14 h-24 w-28 rounded-t-xl"
-    : shapeName.includes("door")
-      ? "left-6 top-10 h-32 w-24 rounded-t-[52px]"
-      : shapeName.includes("angel")
-        ? "left-7 top-12 h-28 w-24 rounded-t-[46px]"
-        : shapeName.includes("monolith")
-          ? "left-6 top-8 h-32 w-24 rounded-sm"
-          : "left-5 top-10 h-28 w-24 rounded-t-[48px]";
-
-  return (
-    <div className="relative mx-auto h-48 w-36">
-      <div className={`absolute left-1/2 top-2 h-4 w-4 -translate-x-1/2 ${accentClass}`} />
-      {shapeName.includes("angel") ? (
-        <>
-          <div className="absolute left-2 top-20 h-12 w-8 -skew-y-12 border border-bone-200/20 bg-bone-100/15" />
-          <div className="absolute right-2 top-20 h-12 w-8 skew-y-12 border border-bone-200/20 bg-bone-100/15" />
-        </>
-      ) : null}
-      <div className={`absolute ${bodyShape} border border-bone-200/35 bg-gradient-to-b from-bone-200/95 to-bone-500/60 pixel-shadow`} />
-      <div className="absolute left-2 top-36 h-8 w-[120px] border border-bone-200/25 bg-grave-700 pixel-shadow" />
-      <div className="absolute left-1/2 top-20 w-24 -translate-x-1/2 text-center font-mono text-xs font-semibold uppercase leading-tight text-grave-950">
-        RIP
-        <span className="mt-1 block text-[10px]">{label}</span>
-      </div>
-      <div className={`absolute right-6 top-24 h-2 w-2 ${accentClass}`} />
-      <div className="absolute left-9 top-28 h-1 w-10 bg-grave-950/35" />
-      <div className="absolute left-11 top-32 h-1 w-6 bg-grave-950/35" />
-      <div className="absolute bottom-0 left-0 h-6 w-full bg-acid-500/15" />
-      <div className="absolute bottom-2 left-4 h-3 w-3 bg-acid-400/50" />
-      <div className="absolute bottom-3 right-6 h-3 w-3 bg-violet-400/50" />
-    </div>
-  );
-}
 
 export default function HeadstonesPage() {
   return (
@@ -138,7 +86,7 @@ export default function HeadstonesPage() {
 
         <div className="grid gap-4 lg:grid-cols-4">
           {headstoneSamples.map((stone) => (
-            <article key={stone.id} className="border border-bone-200/10 bg-grave-900/75 p-5 shadow-card">
+            <article key={stone.id} className="gothic-card p-5">
               <PixelHeadstone accent={stone.accent} label={stone.rarity} shape={stone.shape} />
               <div className="mt-5">
                 <div className="flex flex-wrap items-center justify-between gap-2">
@@ -235,7 +183,7 @@ export default function HeadstonesPage() {
           </div>
         </div>
 
-        <div className="border border-bone-200/10 bg-grave-900/75 p-6 shadow-card">
+        <div className="gothic-card p-6">
           <Boxes className="text-violet-400" size={24} aria-hidden="true" />
           <h2 className="mt-4 font-display text-3xl font-bold text-bone-100">
             Rarity tiers

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { DisclaimerFooter } from "../../components/DisclaimerFooter";
 import { KeepExploring } from "../../components/KeepExploring";
+import { PixelHeadstone } from "../../components/PixelHeadstone";
 import { SectionIntro } from "../../components/SectionIntro";
 import { SiteNav } from "../../components/SiteNav";
 
@@ -90,25 +91,6 @@ const certificateFields = [
   "Optional headstone NFT artwork"
 ];
 
-function SampleHeadstone() {
-  return (
-    <div className="relative mx-auto h-64 w-48">
-      <div className="absolute left-1/2 top-2 h-4 w-4 -translate-x-1/2 bg-acid-400 shadow-[0_0_28px_rgba(166,255,61,0.32)]" />
-      <div className="absolute left-8 top-12 h-36 w-32 rounded-t-[60px] border border-bone-200/35 bg-gradient-to-b from-bone-200/95 to-bone-500/60 pixel-shadow" />
-      <div className="absolute left-4 top-44 h-10 w-40 border border-bone-200/25 bg-grave-700 pixel-shadow" />
-      <div className="absolute left-1/2 top-24 w-28 -translate-x-1/2 text-center font-mono text-sm font-semibold uppercase leading-tight text-grave-950">
-        RIP
-        <span className="mt-2 block text-[11px]">MoonRocket Inu</span>
-      </div>
-      <div className="absolute bottom-0 left-0 h-7 w-full bg-acid-500/15" />
-      <div className="absolute bottom-2 left-6 h-3 w-3 bg-acid-400/60" />
-      <div className="absolute bottom-4 right-9 h-3 w-3 bg-violet-400/60" />
-      <div className="absolute right-7 top-28 h-16 w-1 bg-grave-950/40" />
-      <div className="absolute right-4 top-34 h-1 w-7 bg-grave-950/40" />
-    </div>
-  );
-}
-
 export default function SampleMemorialPage() {
   return (
     <main className="min-h-screen overflow-hidden px-5 py-6 sm:px-8 lg:px-12">
@@ -154,7 +136,7 @@ export default function SampleMemorialPage() {
         </div>
 
         <div className="terminal-border pixel-corners p-5 shadow-card">
-          <SampleHeadstone />
+          <PixelHeadstone accent="acid" label="MoonRocket" shape="Monolith" size="lg" />
           <div className="mt-6 border border-bone-200/10 bg-black/20 p-4">
             <div className="flex items-center justify-between gap-3">
               <p className="font-mono text-xs uppercase text-bone-500">Share URL</p>

@@ -10,6 +10,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { DisclaimerFooter } from "./components/DisclaimerFooter";
+import { GothicScene } from "./components/GothicScene";
+import { PixelHeadstone } from "./components/PixelHeadstone";
 import { PrototypeFlow } from "./components/PrototypeFlow";
 import { SectionIntro } from "./components/SectionIntro";
 import { SiteNav } from "./components/SiteNav";
@@ -127,35 +129,6 @@ const exploreCards = [
   }
 ];
 
-function PixelHeadstone({
-  color,
-  label
-}: {
-  color: "acid" | "violet" | "blood";
-  label: string;
-}) {
-  const accent = {
-    acid: "bg-acid-400 shadow-[0_0_22px_rgba(166,255,61,0.22)]",
-    violet: "bg-violet-400 shadow-[0_0_22px_rgba(181,117,255,0.22)]",
-    blood: "bg-blood-500 shadow-[0_0_22px_rgba(220,50,69,0.22)]"
-  }[color];
-
-  return (
-    <div className="relative mx-auto h-40 w-32">
-      <div className={`absolute left-1/2 top-2 h-3 w-3 -translate-x-1/2 ${accent}`} />
-      <div className="absolute left-5 top-8 h-24 w-[88px] rounded-t-[42px] border border-bone-200/35 bg-gradient-to-b from-bone-200/90 to-bone-500/60 pixel-shadow" />
-      <div className="absolute left-3 top-28 h-7 w-[104px] border border-bone-200/25 bg-grave-700 pixel-shadow" />
-      <div className="absolute left-1/2 top-16 w-20 -translate-x-1/2 text-center font-mono text-[11px] font-semibold uppercase leading-tight text-grave-950">
-        RIP
-        <span className="mt-1 block text-[9px]">{label}</span>
-      </div>
-      <div className="absolute bottom-0 left-0 h-5 w-full bg-acid-500/15" />
-      <div className="absolute bottom-1 left-3 h-2 w-2 bg-acid-400/50" />
-      <div className="absolute bottom-2 right-5 h-2 w-2 bg-violet-400/50" />
-    </div>
-  );
-}
-
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden">
@@ -203,30 +176,39 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="terminal-border pixel-corners p-4 shadow-card sm:p-5">
-            <div className="mb-4 flex items-center justify-between border-b border-acid-400/18 pb-3 font-mono text-xs uppercase text-bone-500">
-              <span>Live cemetery console</span>
-              <span className="text-acid-400">sample feed</span>
-            </div>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {statCards.map((stat) => (
-                <div key={stat.label} className="border border-bone-200/10 bg-grave-950/50 p-4">
-                  <p className="font-mono text-[11px] uppercase text-bone-500">{stat.label}</p>
-                  <p className="mt-2 font-display text-3xl font-bold text-bone-100">{stat.value}</p>
-                  <p className="mt-1 font-mono text-[11px] text-acid-400/80">{stat.note}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-4 border border-bone-200/10 bg-black/25 p-4 font-mono text-xs leading-6 text-bone-200/80">
-              <p>
-                <span className="text-acid-400">&gt;</span> display.mode = sample_data_only
-              </p>
-              <p>
-                <span className="text-acid-400">&gt;</span> wallets.public = false
-              </p>
-              <p>
-                <span className="text-acid-400">&gt;</span> tax.loss.verified = false
-              </p>
+          <div className="space-y-4">
+            <GothicScene
+              title="Founding Cemetery"
+              subtitle="SBT-style overview / sample graveyard"
+            />
+
+            <div className="terminal-border pixel-corners p-4 shadow-card sm:p-5">
+              <div className="mb-4 flex items-center justify-between border-b border-acid-400/18 pb-3 font-mono text-xs uppercase text-bone-500">
+                <span>Live cemetery console</span>
+                <span className="text-acid-400">sample feed</span>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {statCards.map((stat) => (
+                  <div key={stat.label} className="border border-bone-200/10 bg-grave-950/50 p-4">
+                    <p className="font-mono text-[11px] uppercase text-bone-500">{stat.label}</p>
+                    <p className="mt-2 font-display text-3xl font-bold text-bone-100">
+                      {stat.value}
+                    </p>
+                    <p className="mt-1 font-mono text-[11px] text-acid-400/80">{stat.note}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 border border-bone-200/10 bg-black/25 p-4 font-mono text-xs leading-6 text-bone-200/80">
+                <p>
+                  <span className="text-acid-400">&gt;</span> visual.theme = gothic_pixel
+                </p>
+                <p>
+                  <span className="text-acid-400">&gt;</span> wallets.public = false
+                </p>
+                <p>
+                  <span className="text-acid-400">&gt;</span> tax.loss.verified = false
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -250,7 +232,7 @@ export default function Home() {
                 <Link
                   key={card.href}
                   href={card.href}
-                  className="group border border-bone-200/10 bg-grave-900/75 p-6 shadow-card transition hover:border-acid-400/50"
+                  className="gothic-card group p-6 transition"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
@@ -284,11 +266,13 @@ export default function Home() {
             {sampleBurials.map((burial) => (
               <article
                 key={burial.symbol}
-                className="border border-bone-200/10 bg-grave-900/70 p-5 shadow-card"
+                className="gothic-card p-5"
               >
                 <PixelHeadstone
-                  color={burial.color as "acid" | "violet" | "blood"}
+                  accent={burial.color}
                   label={burial.symbol}
+                  shape={burial.symbol === "SMC" ? "Broken angel" : "Tablet"}
+                  size="sm"
                 />
                 <div className="mt-5 flex items-center justify-between gap-3">
                   <div>
