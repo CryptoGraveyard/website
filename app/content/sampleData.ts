@@ -746,6 +746,140 @@ export const methodologyExamples = [
   }
 ] as const;
 
+export const launchReadinessStats = [
+  { label: "Public prototype", value: "Live", note: "Sample-data site" },
+  { label: "Real wallets", value: "Closed", note: "No public receiving addresses" },
+  { label: "Beta backend", value: "Planned", note: "Not collecting requests yet" },
+  { label: "Tax claims", value: "Never", note: "Outside site scope" }
+] as const;
+
+export const launchChecklistGroups = [
+  {
+    group: "Public presence",
+    status: "Mostly ready",
+    summary: "The project can be shared as a sample-data concept site without accepting real burials.",
+    items: [
+      ["Production domain connected", "Done"],
+      ["Homepage explains sample-data mode", "Done"],
+      ["About, FAQ, and safety language published", "Done"],
+      ["Methodology page explains value labels", "Done"],
+      ["Social preview artwork and logo polish", "Next"]
+    ]
+  },
+  {
+    group: "Trust and safety",
+    status: "Strong foundation",
+    summary: "The bright lines are visible: no secrets, no tax promises, no charity language, no live wallets yet.",
+    items: [
+      ["No seed phrase / private key warnings", "Done"],
+      ["No tax-loss verification claims", "Done"],
+      ["No charitable-donation framing", "Done"],
+      ["Pseudonym and masked-wallet defaults", "Prototype"],
+      ["Abuse, spam, and impersonation rules", "Next"]
+    ]
+  },
+  {
+    group: "Controlled beta",
+    status: "Designed, not live",
+    summary: "The request and review flow is mapped out, but there is no storage, admin queue, or user messaging yet.",
+    items: [
+      ["Beta request preview page", "Done"],
+      ["Review process blueprint", "Done"],
+      ["Request database schema", "Next"],
+      ["Admin review screen", "Next"],
+      ["Status notification templates", "Next"]
+    ]
+  },
+  {
+    group: "Wallet operations",
+    status: "Closed",
+    summary: "No receiving wallets should be published until the beta gate, chain choice, and monitoring process are ready.",
+    items: [
+      ["Wallet policy page", "Done"],
+      ["Pick first supported chain", "Next"],
+      ["Create official receiving wallet procedure", "Next"],
+      ["Wallet-control proof instructions", "Next"],
+      ["Unsupported-token handling", "Next"]
+    ]
+  },
+  {
+    group: "Memorial system",
+    status: "Sample only",
+    summary: "The public-facing shape exists, but real memorials need durable records and reviewed source data.",
+    items: [
+      ["Sample memorial route", "Done"],
+      ["Certificate preview", "Done"],
+      ["Coin profile templates", "Done"],
+      ["Memorial database model", "Next"],
+      ["AI eulogy generation workflow", "Later"]
+    ]
+  },
+  {
+    group: "Media and collectibles",
+    status: "Concept preview",
+    summary: "The fun layers are visible, but they should stay behind the core burial loop.",
+    items: [
+      ["Livestream concept page", "Done"],
+      ["Awards and plaque preview", "Done"],
+      ["Headstone trait preview", "Done"],
+      ["OBS overlay route", "Later"],
+      ["NFT / SBT minting plan", "Later"]
+    ]
+  }
+] as const;
+
+export const launchGates = [
+  {
+    gate: "Shareable concept launch",
+    requirement: "Safe public prototype with sample data only",
+    decision: "Ready"
+  },
+  {
+    gate: "Private beta requests",
+    requirement: "Real form storage, review statuses, and no-secrets messaging",
+    decision: "Not ready"
+  },
+  {
+    gate: "First real burial",
+    requirement: "Approved tester, official instructions, selected chain, and manual reconciliation",
+    decision: "Not ready"
+  },
+  {
+    gate: "Public wallet launch",
+    requirement: "Watcher, database, abuse handling, display consent, and unsupported-token policy",
+    decision: "Not ready"
+  },
+  {
+    gate: "Awards with physical plaques",
+    requirement: "Winner consent, private shipping workflow, and clear public award language",
+    decision: "Not ready"
+  },
+  {
+    gate: "NFT / SBT release",
+    requirement: "Minting chain, metadata storage, provenance rules, and no-value-promise language",
+    decision: "Not ready"
+  }
+] as const;
+
+export const launchPrinciples = [
+  {
+    label: "Prototype before money",
+    copy: "Let visitors understand the product with sample data before any real token transfer, paid collectible, or plaque fulfillment exists."
+  },
+  {
+    label: "Manual before automatic",
+    copy: "Use human review for early burials before publishing wallets or relying on automated watchers."
+  },
+  {
+    label: "Labels before leaderboards",
+    copy: "Define sample, observed, estimated, documented, unknown, and not-determined values before ranking real users."
+  },
+  {
+    label: "Consent before clout",
+    copy: "Give participants control over pseudonyms, masked wallets, public transaction links, and plaque shipping details."
+  }
+] as const;
+
 export const headstoneSamples = [
   {
     id: "CG-HS-0001",

@@ -142,6 +142,13 @@ const exploreCards = [
     icon: ClipboardList
   },
   {
+    title: "Launch Checklist",
+    href: "/launch-checklist",
+    eyebrow: "Readiness map",
+    copy: "See what can launch now, what must stay closed, and which gates unlock beta requests, wallets, plaques, and collectibles.",
+    icon: ClipboardList
+  },
+  {
     title: "FAQ",
     href: "/faq",
     eyebrow: "Visitor guidance",

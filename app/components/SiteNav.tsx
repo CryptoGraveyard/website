@@ -14,6 +14,7 @@ type NavKey =
   | "certificates"
   | "livestream"
   | "methodology"
+  | "launch"
   | "wallets"
   | "beta"
   | "faq"
@@ -31,6 +32,7 @@ const navLinks: Array<{ href: string; key: NavKey; label: string }> = [
   { href: "/certificates", key: "certificates", label: "Certificates" },
   { href: "/livestream", key: "livestream", label: "Livestream" },
   { href: "/methodology", key: "methodology", label: "Methodology" },
+  { href: "/launch-checklist", key: "launch", label: "Launch Checklist" },
   { href: "/roadmap", key: "roadmap", label: "Roadmap" },
   { href: "/wallet-policy", key: "wallets", label: "Wallet Plan" },
   { href: "/beta-request", key: "beta", label: "Beta Request" },

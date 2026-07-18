@@ -15,11 +15,12 @@ export const roadmapPhases = [
       "Hall of Fame demo",
       "Awards and plaque preview",
       "Metrics and methodology page",
+      "Public launch checklist",
       "Sample memorial page",
       "FAQ and visitor guidance",
       "About and safety page"
     ],
-    next: ["Social preview artwork", "Logo polish", "Public launch checklist"],
+    next: ["Social preview artwork", "Logo polish", "Public launch pass"],
     href: "/"
   },
   {
