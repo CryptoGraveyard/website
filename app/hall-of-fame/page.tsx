@@ -30,7 +30,8 @@ const leaderboard = [
     burial: "$3.17",
     decline: "$412,880.83",
     epitaph: "Promised orbit. Found basement.",
-    badge: "Funeral of the Month"
+    badge: "Funeral of the Month",
+    profileHref: "/bagholders/moonbagmike"
   },
   {
     rank: 2,
@@ -41,7 +42,8 @@ const leaderboard = [
     burial: "$12.09",
     decline: "$219,037.91",
     epitaph: "APY was the plot twist.",
-    badge: "King Candidate"
+    badge: "King Candidate",
+    profileHref: "/bagholders/vaultwizard"
   },
   {
     rank: 3,
@@ -52,7 +54,8 @@ const leaderboard = [
     burial: "$0.42",
     decline: "$88,209.58",
     epitaph: "Still waiting on the roadmap.",
-    badge: "Vintage Dust"
+    badge: "Vintage Dust",
+    profileHref: "/bagholders/rughistorian"
   },
   {
     rank: 4,
@@ -63,7 +66,8 @@ const leaderboard = [
     burial: "$0.09",
     decline: "$64,499.91",
     epitaph: "Governance arrived after the funeral.",
-    badge: "Token Avalanche"
+    badge: "Token Avalanche",
+    profileHref: "/bagholders/chartmortician"
   },
   {
     rank: 5,
@@ -74,7 +78,8 @@ const leaderboard = [
     burial: "$0.01",
     decline: "$31,403.99",
     epitaph: "The whitepaper was mostly vibes.",
-    badge: "Poet of Pain"
+    badge: "Poet of Pain",
+    profileHref: "/bagholders/exitliquidity"
   },
   {
     rank: 6,
@@ -85,7 +90,8 @@ const leaderboard = [
     burial: "$1.08",
     decline: "$18,775.92",
     epitaph: "A metaverse no one logged into.",
-    badge: "Four-Year Hold"
+    badge: "Four-Year Hold",
+    profileHref: "/bagholders/neversoldactually"
   }
 ];
 
@@ -243,7 +249,12 @@ export default function HallOfFamePage() {
               <div className="flex items-start gap-4">
                 <RankMarker rank={entry.rank} />
                 <div>
-                  <p className="font-mono text-xs uppercase text-bone-500">{entry.alias}</p>
+                  <Link
+                    href={entry.profileHref}
+                    className="font-mono text-xs uppercase text-bone-500 hover:text-acid-400"
+                  >
+                    {entry.alias}
+                  </Link>
                   <h3 className="mt-1 font-display text-2xl font-bold text-bone-100">{entry.coin}</h3>
                   <p className="mt-2 text-sm leading-6 text-bone-500">{entry.epitaph}</p>
                 </div>
@@ -279,6 +290,12 @@ export default function HallOfFamePage() {
                     Sample memorial →
                   </Link>
                 ) : null}
+                <Link
+                  href={entry.profileHref}
+                  className="font-mono text-[11px] uppercase text-acid-400 hover:text-bone-100"
+                >
+                  Bagholder profile
+                </Link>
               </div>
             </article>
           ))}

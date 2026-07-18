@@ -11,6 +11,7 @@ export const roadmapPhases = [
       "Production domain connected",
       "Homepage dashboard with sample data",
       "Sample cemetery catalog",
+      "Bagholder directory and profiles",
       "Hall of Fame demo",
       "Sample memorial page",
       "FAQ and visitor guidance",

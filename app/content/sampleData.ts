@@ -219,6 +219,158 @@ export const coinConfidenceLabels = [
   }
 ] as const;
 
+export const bagholderProfiles = [
+  {
+    alias: "MoonBagMike",
+    slug: "moonbagmike",
+    rank: "#1",
+    title: "Funeral of the Month",
+    motto: "Never sold. Barely slept.",
+    joined: "Founding sample class",
+    totalBurials: "3",
+    peakBuried: "$812,442",
+    burialValue: "$4.22",
+    biggestBurial: "MoonRocket Inu",
+    favoriteCause: "Roadmap Silence",
+    displayWallet: "0x91A3...72F8",
+    profileStatus: "Sample profile",
+    bio:
+      "MoonBagMike represents the legendary bagholder archetype: optimistic at the top, philosophical at the bottom, and weirdly proud of the receipt.",
+    badges: ["Funeral of the Month", "Founder Series", "Biggest Round Trip"],
+    burials: [
+      ["MoonRocket Inu", "$412,884", "$3.17"],
+      ["DragonCandle", "$612,450", "$9.99"],
+      ["LaserLlama", "$52,118", "$0.73"]
+    ]
+  },
+  {
+    alias: "VaultWizard",
+    slug: "vaultwizard",
+    rank: "#2",
+    title: "Most Diamond Hands",
+    motto: "The vault stayed closed. Unfortunately.",
+    joined: "Founding sample class",
+    totalBurials: "2",
+    peakBuried: "$364,380",
+    burialValue: "$30.49",
+    biggestBurial: "Yield Phantom",
+    favoriteCause: "Impossible APY",
+    displayWallet: "0xA771...9C20",
+    profileStatus: "Sample profile",
+    bio:
+      "VaultWizard is the cautionary patron saint of locked yields, delayed exits, and yield dashboards that looked better in screenshots.",
+    badges: ["King Candidate", "Diamond Hands", "APY Survivor"],
+    burials: [
+      ["Yield Phantom", "$219,050", "$12.09"],
+      ["FrogYield Max", "$145,330", "$18.40"]
+    ]
+  },
+  {
+    alias: "RugHistorian",
+    slug: "rughistorian",
+    rank: "#3",
+    title: "Vintage Dust",
+    motto: "Every rug deserves footnotes.",
+    joined: "Founding sample class",
+    totalBurials: "2",
+    peakBuried: "$202,219",
+    burialValue: "$2.45",
+    biggestBurial: "Oracle Hamster",
+    favoriteCause: "Founder Vanishing",
+    displayWallet: "0xF00D...CAFE",
+    profileStatus: "Sample profile",
+    bio:
+      "RugHistorian keeps meticulous notes on abandoned Discords, vanished founders, and the tiny moments before everyone pretended they were always bearish.",
+    badges: ["Oldest Bag", "Vintage Dust", "Receipts Archivist"],
+    burials: [
+      ["SafeMars Classic", "$88,210", "$0.42"],
+      ["Oracle Hamster", "$114,009", "$2.03"]
+    ]
+  },
+  {
+    alias: "ChartMortician",
+    slug: "chartmortician",
+    rank: "#4",
+    title: "Token Avalanche",
+    motto: "I pronounce this chart deceased.",
+    joined: "Sample beta queue",
+    totalBurials: "1",
+    peakBuried: "$64,500",
+    burialValue: "$0.09",
+    biggestBurial: "ApeNebula DAO",
+    favoriteCause: "Governance Collapse",
+    displayWallet: "0xC0FF...1A7E",
+    profileStatus: "Sample profile",
+    bio:
+      "ChartMortician specializes in post-mortems for governance tokens that achieved decentralization mostly by dispersing blame.",
+    badges: ["Most Tokens Buried", "DAO Survivor", "Chart Coroner"],
+    burials: [["ApeNebula DAO", "$64,500", "$0.09"]]
+  },
+  {
+    alias: "ExitLiquidity",
+    slug: "exitliquidity",
+    rank: "#5",
+    title: "Poet of Pain",
+    motto: "Someone had to buy the top.",
+    joined: "Sample beta queue",
+    totalBurials: "1",
+    peakBuried: "$31,404",
+    burialValue: "$0.01",
+    biggestBurial: "Diamond Pawz",
+    favoriteCause: "Meme Fatigue",
+    displayWallet: "0xBEEF...0420",
+    profileStatus: "Sample profile",
+    bio:
+      "ExitLiquidity turns catastrophic entries into oddly elegant epitaphs. The losses are fictional; the emotional arc is, regrettably, plausible.",
+    badges: ["Best Epitaph", "Meme Casualty", "Liquidity Provider"],
+    burials: [["Diamond Pawz", "$31,404", "$0.01"]]
+  },
+  {
+    alias: "NeverSoldActually",
+    slug: "neversoldactually",
+    rank: "#6",
+    title: "Four-Year Hold",
+    motto: "The exit was always tomorrow.",
+    joined: "Sample beta queue",
+    totalBurials: "1",
+    peakBuried: "$18,777",
+    burialValue: "$1.08",
+    biggestBurial: "MetaCoffin",
+    favoriteCause: "Metaverse Nobody Entered",
+    displayWallet: "0xDEAD...BEEF",
+    profileStatus: "Sample profile",
+    bio:
+      "NeverSoldActually is the patron of unopened portfolio trackers, tax lots in denial, and metaverse land nobody visited.",
+    badges: ["Longest Hold", "Four-Year Hold", "Tab Still Open"],
+    burials: [["MetaCoffin", "$18,777", "$1.08"]]
+  }
+] as const;
+
+export type BagholderProfile = (typeof bagholderProfiles)[number];
+
+export function getBagholderBySlug(slug: string) {
+  return bagholderProfiles.find((profile) => profile.slug === slug);
+}
+
+export const bagholderProfileNotes = [
+  {
+    label: "Identity",
+    copy: "Profiles are pseudonymous by default and should never require legal names for public display."
+  },
+  {
+    label: "SBT fit",
+    copy: "The profile is the right place for future non-transferable achievement credit."
+  },
+  {
+    label: "Public proof",
+    copy: "Future profiles can link to burials, certificates, confidence labels, and masked wallet evidence."
+  },
+  {
+    label: "Safety line",
+    copy: "A profile is community recognition, not tax verification, identity proof, or valuation evidence."
+  }
+] as const;
+
 export const headstoneSamples = [
   {
     id: "CG-HS-0001",

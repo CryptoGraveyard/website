@@ -7,7 +7,8 @@ import {
   Ghost,
   Radio,
   Trophy,
-  TvMinimalPlay
+  TvMinimalPlay,
+  UsersRound
 } from "lucide-react";
 import Link from "next/link";
 import { DisclaimerFooter } from "./components/DisclaimerFooter";
@@ -69,6 +70,13 @@ const exploreCards = [
     eyebrow: "Demo leaderboard",
     copy: "Browse fictional awards, biggest round trips, and the leaderboard language that keeps entertainment metrics separate from tax facts.",
     icon: Trophy
+  },
+  {
+    title: "Bagholders",
+    href: "/bagholders",
+    eyebrow: "Profile layer",
+    copy: "Meet fictional participant profiles, sample badges, burial histories, and the future SBT-style identity concept.",
+    icon: UsersRound
   },
   {
     title: "Bury a Coin",

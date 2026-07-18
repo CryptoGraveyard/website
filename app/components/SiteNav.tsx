@@ -4,6 +4,7 @@ import { Skull, TvMinimalPlay } from "lucide-react";
 type NavKey =
   | "home"
   | "cemetery"
+  | "bagholders"
   | "roadmap"
   | "hall"
   | "bury"
@@ -19,6 +20,7 @@ type NavKey =
 const navLinks: Array<{ href: string; key: NavKey; label: string }> = [
   { href: "/", key: "home", label: "Dashboard" },
   { href: "/cemetery", key: "cemetery", label: "Cemetery" },
+  { href: "/bagholders", key: "bagholders", label: "Bagholders" },
   { href: "/hall-of-fame", key: "hall", label: "Hall of Fame" },
   { href: "/bury-a-coin", key: "bury", label: "Bury a Coin" },
   { href: "/memorial/sample", key: "memorial", label: "Sample Memorial" },
