@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Award, BadgeCheck, Crown, Gem, Medal, ShieldCheck, Sparkles, Trophy } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
+import { KeepExploring } from "../components/KeepExploring";
 import { SectionIntro } from "../components/SectionIntro";
 import { SiteNav } from "../components/SiteNav";
 import { awardGuardrails, awardPrograms } from "../content/sampleData";
@@ -249,6 +250,8 @@ export default function AwardsPage() {
           </Link>
         </div>
       </section>
+
+      <KeepExploring current="awards" />
 
       <DisclaimerFooter variant="demo" />
     </main>

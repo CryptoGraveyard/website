@@ -11,6 +11,7 @@ import {
   Trophy
 } from "lucide-react";
 import { DisclaimerFooter } from "../../components/DisclaimerFooter";
+import { KeepExploring } from "../../components/KeepExploring";
 import { SectionIntro } from "../../components/SectionIntro";
 import { SiteNav } from "../../components/SiteNav";
 
@@ -289,6 +290,8 @@ export default function SampleMemorialPage() {
           </Link>
         </div>
       </section>
+
+      <KeepExploring current="memorial" />
 
       <DisclaimerFooter variant="sample" />
     </main>

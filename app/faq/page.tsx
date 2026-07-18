@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CircleHelp, FileWarning, ShieldCheck, Skull } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
+import { KeepExploring } from "../components/KeepExploring";
 import { SectionIntro } from "../components/SectionIntro";
 import { SiteNav } from "../components/SiteNav";
 import { neverAskItems } from "../content/safety";
@@ -143,6 +144,8 @@ export default function FAQPage() {
           </Link>
         </div>
       </section>
+
+      <KeepExploring current="faq" />
 
       <DisclaimerFooter variant="standard" />
     </main>

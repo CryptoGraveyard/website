@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Ghost, Search, ShieldCheck, Skull, Trophy } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
+import { KeepExploring } from "../components/KeepExploring";
 import { SectionIntro } from "../components/SectionIntro";
 import { SiteNav } from "../components/SiteNav";
 import { cemeteryCoins, cemeteryStats, getCoinSlug } from "../content/sampleData";
@@ -188,6 +189,8 @@ export default function CemeteryPage() {
           </Link>
         </div>
       </section>
+
+      <KeepExploring current="cemetery" />
 
       <DisclaimerFooter variant="demo" />
     </main>

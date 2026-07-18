@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BadgeCheck, FileText, Ghost, QrCode, ShieldCheck, Sparkles } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
+import { KeepExploring } from "../components/KeepExploring";
 import { SectionIntro } from "../components/SectionIntro";
 import { SiteNav } from "../components/SiteNav";
 import { certificateFields } from "../content/sampleData";
@@ -171,6 +172,8 @@ export default function CertificatesPage() {
           </Link>
         </div>
       </section>
+
+      <KeepExploring current="certificates" />
 
       <DisclaimerFooter variant="sample" />
     </main>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Boxes, Gem, ShieldCheck, Sparkles, Trophy } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
+import { KeepExploring } from "../components/KeepExploring";
 import { SectionIntro } from "../components/SectionIntro";
 import { SiteNav } from "../components/SiteNav";
 import { headstoneSamples, rarityTiers, traitGroups } from "../content/sampleData";
@@ -196,6 +197,8 @@ export default function HeadstonesPage() {
           </Link>
         </div>
       </section>
+
+      <KeepExploring current="headstones" />
 
       <DisclaimerFooter variant="standard" />
     </main>

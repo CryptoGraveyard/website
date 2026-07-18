@@ -9,6 +9,7 @@ import {
   ShieldCheck
 } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
+import { KeepExploring } from "../components/KeepExploring";
 import { SiteNav } from "../components/SiteNav";
 
 export const metadata: Metadata = {
@@ -211,6 +212,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <KeepExploring current="about" />
 
       <DisclaimerFooter variant="standard" />
     </main>
