@@ -135,6 +135,13 @@ const exploreCards = [
     icon: Radio
   },
   {
+    title: "Stream Overlay",
+    href: "/overlay",
+    eyebrow: "OBS preview",
+    copy: "Preview the sample browser-source composition for burial alerts, ticker text, leaderboard rows, and stream safety labels.",
+    icon: TvMinimalPlay
+  },
+  {
     title: "Methodology",
     href: "/methodology",
     eyebrow: "Metric rules",

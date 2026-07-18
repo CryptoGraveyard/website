@@ -93,10 +93,10 @@ export const roadmapPhases = [
     status: "Later",
     summary:
       "Turn burials into stream-ready moments: live feed, OBS overlay, animations, and YouTube companion content.",
-    shipped: [],
+    shipped: ["Livestream concept page", "OBS-style overlay preview"],
     next: [
       "Live burial feed",
-      "OBS overlay route",
+      "Production OBS browser source",
       "Funeral animation states",
       "YouTube embed/automation",
       "Clip/highlight workflow"

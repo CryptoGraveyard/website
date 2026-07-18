@@ -822,7 +822,8 @@ export const launchChecklistGroups = [
       ["Livestream concept page", "Done"],
       ["Awards and plaque preview", "Done"],
       ["Headstone trait preview", "Done"],
-      ["OBS overlay route", "Later"],
+      ["OBS-style overlay preview", "Done"],
+      ["Production OBS browser source", "Later"],
       ["NFT / SBT minting plan", "Later"]
     ]
   }
@@ -991,6 +992,53 @@ export const liveSegments = [
     duration: "Event",
     copy: "Interrupt the loop when a new burial eventually arrives from the real watcher."
   }
+] as const;
+
+export const overlayTickerItems = [
+  "Watcher offline: no public wallets yet",
+  "Sample feed only",
+  "MoonRocket Inu funeral queued",
+  "Peak observed value is not tax basis",
+  "Never share seed phrases",
+  "Next ceremony: Yield Phantom obituary"
+] as const;
+
+export const overlayLeaderboardRows = [
+  ["#1", "MoonBagMike", "MoonRocket Inu", "$412,880.83"],
+  ["#2", "VaultWizard", "Yield Phantom", "$219,037.91"],
+  ["#3", "RugHistorian", "SafeMars Classic", "$88,209.58"],
+  ["#4", "ChartMortician", "ApeNebula DAO", "$64,499.91"]
+] as const;
+
+export const overlaySceneCards = [
+  {
+    scene: "Idle loop",
+    runtime: "04:00",
+    copy: "Rotates latest burials, leaderboard rows, safety labels, and upcoming ceremony cards."
+  },
+  {
+    scene: "Burial alert",
+    runtime: "00:30",
+    copy: "Interrupts the loop when a future watcher confirms an approved burial transfer."
+  },
+  {
+    scene: "Eulogy card",
+    runtime: "01:20",
+    copy: "Displays the coin epitaph, cause of death, peak observed value, and burial value."
+  },
+  {
+    scene: "Hall of Fame",
+    runtime: "02:30",
+    copy: "Cycles award candidates, monthly winners, and future plaque/headstone eligibility."
+  }
+] as const;
+
+export const overlaySafetyBadges = [
+  "Sample data",
+  "No live wallets",
+  "Not tax advice",
+  "No value promise",
+  "Do not send secrets"
 ] as const;
 
 export const faqItems = [
