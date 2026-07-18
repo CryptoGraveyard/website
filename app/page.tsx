@@ -135,6 +135,13 @@ const exploreCards = [
     icon: Radio
   },
   {
+    title: "Methodology",
+    href: "/methodology",
+    eyebrow: "Metric rules",
+    copy: "Separate peak observed value, burial value, round trip, documentation status, and tax treatment before real data arrives.",
+    icon: ClipboardList
+  },
+  {
     title: "FAQ",
     href: "/faq",
     eyebrow: "Visitor guidance",

@@ -5,6 +5,7 @@ import {
   ArrowLeft,
   BadgeCheck,
   BellRing,
+  ClipboardList,
   FileText,
   Ghost,
   ShieldCheck,
@@ -128,6 +129,13 @@ export default async function CoinProfilePage({ params }: CoinPageProps) {
             >
               <Trophy size={18} aria-hidden="true" />
               Hall of Fame
+            </Link>
+            <Link
+              href="/methodology"
+              className="inline-flex items-center justify-center gap-2 border border-bone-200/25 bg-grave-800 px-5 py-3 font-mono text-sm font-semibold uppercase text-bone-100 transition hover:border-acid-400 hover:text-acid-400"
+            >
+              <ClipboardList size={18} aria-hidden="true" />
+              Methodology
             </Link>
           </div>
         </div>

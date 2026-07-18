@@ -14,6 +14,7 @@ export const roadmapPhases = [
       "Bagholder directory and profiles",
       "Hall of Fame demo",
       "Awards and plaque preview",
+      "Metrics and methodology page",
       "Sample memorial page",
       "FAQ and visitor guidance",
       "About and safety page"
@@ -75,7 +76,7 @@ export const roadmapPhases = [
     status: "Planned",
     summary:
       "Generate real memorial pages, eulogies, confidence labels, timelines, and certificates from reviewed burial records.",
-    shipped: ["Sample memorial prototype", "Certificate preview page"],
+    shipped: ["Sample memorial prototype", "Certificate preview page", "Metric definitions"],
     next: [
       "Memorial database schema",
       "AI eulogy workflow",

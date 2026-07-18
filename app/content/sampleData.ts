@@ -627,6 +627,125 @@ export const awardGuardrails = [
   }
 ] as const;
 
+export const metricDefinitions = [
+  {
+    metric: "Peak observed value",
+    formula: "Highest observed wallet balance × market reference price",
+    publicLabel: "Entertainment metric",
+    copy:
+      "The largest notional value the observed wallet appears to have held during the selected period. This is not the same as what the person paid or what they could actually sell for."
+  },
+  {
+    metric: "Estimated liquidation value",
+    formula: "Modeled proceeds after liquidity, slippage, depth, and fees",
+    publicLabel: "Harder estimate",
+    copy:
+      "A future advanced metric that asks what the position might realistically have sold for at a point in time. This needs historical liquidity data, not just a chart price."
+  },
+  {
+    metric: "Burial value",
+    formula: "Estimated value immediately before the burial transfer",
+    publicLabel: "Event estimate",
+    copy:
+      "The estimated market or liquidation value when the token was sent to the cemetery. For truly illiquid tokens, this may be near-zero or indeterminable."
+  },
+  {
+    metric: "Round trip",
+    formula: "Peak observed value − burial value",
+    publicLabel: "Story metric",
+    copy:
+      "A dramatic before-and-after number for leaderboards and storytelling. It is intentionally separate from documented acquisition cost and tax treatment."
+  },
+  {
+    metric: "Documented acquisition cost",
+    formula: "User-submitted records reviewed against chain history",
+    publicLabel: "Private-review tier",
+    copy:
+      "A future evidence tier based on exchange statements, transaction exports, or other records. Even then, Crypto Graveyard should not call it a verified deductible tax loss."
+  },
+  {
+    metric: "Tax loss",
+    formula: "Outside Crypto Graveyard’s determination",
+    publicLabel: "Not provided",
+    copy:
+      "Tax treatment depends on the taxpayer, facts, records, law, and professional advice. The site should never display a trophy or certificate as tax verification."
+  }
+] as const;
+
+export const confidenceTiers = [
+  {
+    label: "Sample",
+    status: "Prototype only",
+    copy: "Fictional data used to design the site before real wallets, transfers, or market feeds are connected."
+  },
+  {
+    label: "On-chain observed",
+    status: "Public chain data",
+    copy: "Token quantities, timestamps, and transfers that can be read from a blockchain explorer or indexer."
+  },
+  {
+    label: "Market referenced",
+    status: "Price source attached",
+    copy: "Value estimates using a stated exchange, DEX pool, aggregator, block, timestamp, or price methodology."
+  },
+  {
+    label: "User documented",
+    status: "Private evidence",
+    copy: "Participant-provided records that support acquisition cost or chain-of-custody, reviewed without publishing sensitive documents."
+  },
+  {
+    label: "Indeterminable",
+    status: "No reliable value",
+    copy: "Used when liquidity, market data, ownership continuity, or token mechanics are too unclear for a responsible estimate."
+  }
+] as const;
+
+export const valueMethodologySteps = [
+  {
+    step: "Identify the asset",
+    copy: "Confirm chain, contract or mint address, token decimals, symbol, and whether migrations, wrappers, rebases, or reflection mechanics exist."
+  },
+  {
+    step: "Rebuild the observed balance",
+    copy: "Track incoming and outgoing transfers over time instead of multiplying the final donated quantity by the historic highest price."
+  },
+  {
+    step: "Attach market references",
+    copy: "Use a transparent hierarchy of reputable exchange trades, executable DEX liquidity, aggregators, and documented fallback estimates."
+  },
+  {
+    step: "Separate notional from realizable",
+    copy: "Label chart-price math separately from liquidation estimates that account for market depth, slippage, and fees."
+  },
+  {
+    step: "Publish confidence labels",
+    copy: "Show what is sample, on-chain observed, market referenced, user documented, estimated, unknown, or not determined."
+  }
+] as const;
+
+export const methodologyExamples = [
+  {
+    title: "Gradual accumulation",
+    mistake: "Using final token quantity × highest historic price",
+    correction: "Reconstruct balance intervals so the wallet only gets credit for tokens it actually held at each price point."
+  },
+  {
+    title: "Thin liquidity",
+    mistake: "Treating a tiny DEX trade as proof the entire bag was worth millions",
+    correction: "Display peak notional value separately from estimated liquidation value after modeled price impact."
+  },
+  {
+    title: "Transferred wallet history",
+    mistake: "Assuming the current signer owned the wallet through every historical transfer",
+    correction: "Phrase public claims around the wallet unless separate documentation supports person-level continuity."
+  },
+  {
+    title: "Worthless token",
+    mistake: "Calling an illiquid token a verified zero-value tax loss",
+    correction: "Label the burial value as near-zero, unavailable, or indeterminable without determining tax treatment."
+  }
+] as const;
+
 export const headstoneSamples = [
   {
     id: "CG-HS-0001",
@@ -755,6 +874,11 @@ export const faqItems = [
     question: "Why use sample data first?",
     answer:
       "Sample data lets the full user experience be designed safely before real wallets, real transfers, private review records, or automated blockchain watchers exist."
+  },
+  {
+    question: "What does peak observed value mean?",
+    answer:
+      "It is an entertainment and analytics metric based on what a wallet appears to have held at a market reference price. It is not the same as purchase cost, realizable liquidation value, or a verified tax loss."
   },
   {
     question: "Will wallet addresses be public?",
