@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { DisclaimerFooter } from "./components/DisclaimerFooter";
+import { PrototypeFlow } from "./components/PrototypeFlow";
 import { SectionIntro } from "./components/SectionIntro";
 import { SiteNav } from "./components/SiteNav";
 
@@ -231,6 +232,8 @@ export default function Home() {
         </div>
       </section>
 
+      <PrototypeFlow className="border-y border-bone-200/10 bg-black/10" />
+
       <section className="px-5 py-14 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <SectionIntro
@@ -319,56 +322,6 @@ export default function Home() {
                 </Link>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-5 py-14 sm:px-8 lg:px-12">
-        <div className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-3">
-          <div className="border border-acid-400/20 bg-acid-400/10 p-6">
-            <Trophy className="text-acid-400" size={24} aria-hidden="true" />
-            <h3 className="mt-4 font-display text-2xl font-bold text-bone-100">
-              Hall of legendary losses
-            </h3>
-            <p className="mt-3 text-sm leading-6 text-bone-500">
-              Leaderboards separate entertainment metrics from tax facts.
-            </p>
-            <Link
-              href="/hall-of-fame"
-              className="mt-5 inline-flex font-mono text-xs uppercase text-acid-400 hover:text-bone-100"
-            >
-              View demo leaderboard →
-            </Link>
-          </div>
-          <div className="border border-violet-400/20 bg-violet-400/10 p-6">
-            <Flame className="text-violet-400" size={24} aria-hidden="true" />
-            <h3 className="mt-4 font-display text-2xl font-bold text-bone-100">
-              Funeral ceremonies
-            </h3>
-            <p className="mt-3 text-sm leading-6 text-bone-500">
-              Stream-ready scenes and eulogies come later, once burials are real.
-            </p>
-            <Link
-              href="/livestream"
-              className="mt-5 inline-flex font-mono text-xs uppercase text-acid-400 hover:text-bone-100"
-            >
-              View livestream concept →
-            </Link>
-          </div>
-          <div className="border border-bone-200/10 bg-bone-100/10 p-6">
-            <BadgeCheck className="text-bone-100" size={24} aria-hidden="true" />
-            <h3 className="mt-4 font-display text-2xl font-bold text-bone-100">
-              Safety-first teaser
-            </h3>
-            <p className="mt-3 text-sm leading-6 text-bone-500">
-              No live receiving wallets, no tax promises, and no request for wallet secrets.
-            </p>
-            <Link
-              href="/faq"
-              className="mt-5 inline-flex font-mono text-xs uppercase text-acid-400 hover:text-bone-100"
-            >
-              Read FAQ →
-            </Link>
           </div>
         </div>
       </section>
