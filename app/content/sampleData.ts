@@ -164,6 +164,61 @@ export const cemeteryCoins = [
   }
 ] as const;
 
+export type CemeteryCoin = (typeof cemeteryCoins)[number];
+
+export function getCoinSlug(coin: Pick<CemeteryCoin, "coin">) {
+  return coin.coin
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+export function getCoinBySlug(slug: string) {
+  return cemeteryCoins.find((coin) => getCoinSlug(coin) === slug);
+}
+
+export const coinProfileTimeline = [
+  {
+    label: "Launch hype",
+    copy: "The sample project enters the world with a roadmap, mascot, and confidence levels unsuitable for daylight."
+  },
+  {
+    label: "Peak observed value",
+    copy: "The fictional wallet reaches its maximum notional value during the observed sample holding period."
+  },
+  {
+    label: "Cause of death",
+    copy: "The project suffers the condition listed in the cemetery catalog: silence, exploit, inflation, fatigue, or other chart disease."
+  },
+  {
+    label: "Burial record",
+    copy: "The future real version would link the burial transaction, confidence labels, certificate, and memorial eulogy."
+  }
+] as const;
+
+export const coinConfidenceLabels = [
+  {
+    label: "Token identity",
+    status: "Sample",
+    copy: "Future records should verify the token contract or mint address against the selected chain."
+  },
+  {
+    label: "Wallet control",
+    status: "Future proof",
+    copy: "Real burials should require signed-message proof or a small verification transaction."
+  },
+  {
+    label: "Peak value",
+    status: "Estimated",
+    copy: "Peak notional value should remain separate from estimated liquidation value and documented acquisition cost."
+  },
+  {
+    label: "Tax treatment",
+    status: "Not determined",
+    copy: "Crypto Graveyard should never label a profile as a verified deductible tax loss."
+  }
+] as const;
+
 export const headstoneSamples = [
   {
     id: "CG-HS-0001",

@@ -4,7 +4,7 @@ import { Coins, Ghost, Search, ShieldCheck, Skull, Trophy } from "lucide-react";
 import { DisclaimerFooter } from "../components/DisclaimerFooter";
 import { SectionIntro } from "../components/SectionIntro";
 import { SiteNav } from "../components/SiteNav";
-import { cemeteryCoins, cemeteryStats } from "../content/sampleData";
+import { cemeteryCoins, cemeteryStats, getCoinSlug } from "../content/sampleData";
 
 export const metadata: Metadata = {
   title: "Coin Cemetery | Crypto Graveyard",
@@ -106,8 +106,9 @@ export default function CemeteryPage() {
 
         <div className="grid gap-4 lg:grid-cols-3">
           {cemeteryCoins.map((coin) => (
-            <article
+            <Link
               key={coin.symbol}
+              href={`/coins/${getCoinSlug(coin)}`}
               className="border border-bone-200/10 bg-grave-900/75 p-5 shadow-card"
             >
               <div className="flex items-start justify-between gap-4">
@@ -158,7 +159,10 @@ export default function CemeteryPage() {
                   {coin.confidence}
                 </span>
               </div>
-            </article>
+              <p className="mt-5 font-mono text-xs uppercase text-acid-400 hover:text-bone-100">
+                Open coin profile →
+              </p>
+            </Link>
           ))}
         </div>
       </section>

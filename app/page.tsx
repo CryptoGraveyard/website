@@ -23,7 +23,8 @@ const sampleBurials = [
     peak: "$412,884",
     burial: "$3.17",
     inscription: "Promised orbit. Found basement.",
-    color: "acid"
+    color: "acid",
+    href: "/coins/moonrocket-inu"
   },
   {
     coin: "SafeMars Classic",
@@ -32,7 +33,8 @@ const sampleBurials = [
     peak: "$88,210",
     burial: "$0.42",
     inscription: "Still waiting on the roadmap.",
-    color: "violet"
+    color: "violet",
+    href: "/coins/safemars-classic"
   },
   {
     coin: "Yield Phantom",
@@ -41,7 +43,8 @@ const sampleBurials = [
     peak: "$219,050",
     burial: "$12.09",
     inscription: "APY was the plot twist.",
-    color: "blood"
+    color: "blood",
+    href: "/coins/yield-phantom"
   }
 ];
 
@@ -311,8 +314,24 @@ export default function Home() {
                   </div>
                 </div>
                 <Link
-                  href="/memorial/sample"
+                  href={burial.href}
                   className="mt-5 inline-flex font-mono text-xs uppercase text-acid-400 hover:text-bone-100"
+                >
+                  Open coin profile
+                </Link>
+                <Link
+                  href={burial.href}
+                  className="hidden"
+                  aria-hidden="true"
+                  tabIndex={-1}
+                >
+                  Open coin profile →
+                </Link>
+                <Link
+                  href={burial.href}
+                  className="hidden"
+                  aria-hidden="true"
+                  tabIndex={-1}
                 >
                   View sample memorial →
                 </Link>
